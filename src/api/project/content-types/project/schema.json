@@ -35,16 +35,17 @@
       "target": "api::technology.technology",
       "inversedBy": "projects"
     },
-    "clientSinceYear": {
-      "type": "integer",
-      "required": true
-    },
     "region": {
       "type": "string",
       "required": true
     },
     "industry": {
       "type": "text"
+    },
+    "clientSinceYear": {
+      "type": "date",
+      "required": true,
+      "default": "2024-11-30"
     }
   }
 }
