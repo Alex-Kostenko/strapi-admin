@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.3.0",
+    "@strapi/plugin-documentation": "^5.4.0",
     "@strapi/plugin-users-permissions": "5.3.0",
     "@strapi/strapi": "5.3.0",
     "pg": "8.8.0",
