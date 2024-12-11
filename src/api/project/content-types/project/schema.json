@@ -86,6 +86,12 @@
       "relation": "manyToMany",
       "target": "api::project-domain.project-domain",
       "inversedBy": "projects"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "mappedBy": "projects"
     }
   }
 }
