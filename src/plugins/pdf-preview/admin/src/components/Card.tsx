@@ -19,6 +19,11 @@ import { Link } from 'react-router-dom';
 import { request } from '../utils/request.service';
 import { Divider } from '@strapi/design-system';
 import { useState } from 'react';
+import { Trash } from '@strapi/icons';
+import { Flex } from '@strapi/design-system';
+import { IReplay } from '../pages/HomePage';
+import Modal from './Modal';
+import { Button } from '@strapi/design-system';
 
 interface CardProps {
   name: string;
@@ -28,6 +33,7 @@ interface CardProps {
   createdAt: string;
   state: 'read' | 'unread';
   pdfPath: string;
+  updateReplays: (documentId: string) => void;
 }
 
 const textStyle = {
@@ -55,6 +61,10 @@ const contentStyle = {
   gap: 5,
 };
 
+const deleteStyle = {
+  cursor: 'pointer',
+};
+
 function formatDate(date: Date) {
   const day = String(date.getDate()).padStart(2, '0');
   const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -71,9 +81,11 @@ const CardComponent = ({
   createdAt,
   state,
   pdfPath,
+  updateReplays,
 }: CardProps) => {
   const localeDate = formatDate(new Date(createdAt));
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [read, setRead] = useState(state);
 
   const documentState = {
@@ -89,56 +101,93 @@ const CardComponent = ({
     });
   };
 
-  return (
-    <Card style={cardStyle}>
-      <CardBody>
-        <CardContent style={contentStyle}>
-          <CardTitle>Name: {name}</CardTitle>
-          <Divider />
-          <CardTitle>Email: {email}</CardTitle>
-          <Divider />
-          <CardTitle style={textStyle}>Message: {message}</CardTitle>
-          <Divider />
+  const closeModal = () => setIsModalOpen(false);
 
-          <div
-            style={{
-              marginTop: 'auto',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
+  const openModal = () => setIsModalOpen(true);
+
+  const deleteDocument = () => {
+    request.delete('/contact-uses/' + documentId);
+    updateReplays(documentId);
+  };
+
+  return (
+    <>
+      <Card style={cardStyle}>
+        <CardBody>
+          <CardContent style={contentStyle}>
+            <Flex justifyContent={'space-between'}>
+              <CardTitle>Name: {name}</CardTitle>
+              <Trash style={deleteStyle} onClick={openModal} />
+            </Flex>
+            <Divider />
+            <CardTitle>Email: {email}</CardTitle>
+            <Divider />
+            <CardTitle style={textStyle}>Message: {message}</CardTitle>
+            <Divider />
+
             <div
               style={{
+                marginTop: 'auto',
                 display: 'flex',
-                flexDirection: 'column',
-                gap: 5,
+                justifyContent: 'space-between',
+                alignItems: 'center',
               }}
             >
-              <CardTitle>{localeDate}</CardTitle>
-              <Checkbox
-                checked={read === 'read' ? true : false}
-                onCheckedChange={() => {
-                  readDocument();
-                  setRead((prev) => (prev === 'read' ? 'unread' : 'read'));
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 5,
                 }}
               >
-                Checked
-              </Checkbox>
+                <CardTitle>{localeDate}</CardTitle>
+                <Checkbox
+                  checked={read === 'read' ? true : false}
+                  onCheckedChange={() => {
+                    readDocument();
+                    setRead((prev) => (prev === 'read' ? 'unread' : 'read'));
+                  }}
+                >
+                  Checked
+                </Checkbox>
+              </div>
+              <LinkButton
+                style={{ width: '45%' }}
+                tag={Link}
+                to={'document/' + pdfPath.substring(9, pdfPath.length - 4)}
+                state={documentState}
+              >
+                View more
+              </LinkButton>
             </div>
-            <LinkButton
-              style={{ width: '45%' }}
-              tag={Link}
-              to={'document/' + pdfPath.substring(9, pdfPath.length - 4)}
-              state={documentState}
-            >
-              View more
-            </LinkButton>
-          </div>
-          {/* <Checkbox /> */}
-        </CardContent>
-      </CardBody>
-    </Card>
+          </CardContent>
+        </CardBody>
+      </Card>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        style={{ width: 'fit-content', height: 'fit-content' }}
+      >
+        <Flex direction={'column'} alignItems={'flex-start'} gap={2}>
+          <Typography>Are you sure to delete?</Typography>
+          <Divider />
+          <Typography>Document ID: {documentId}</Typography>
+          <Divider />
+          <Typography>Name: {name}</Typography>
+          <Divider />
+          <Typography>Email: {email}</Typography>
+          <Divider />
+          <Flex justifyContent={{ initial: 'space-between' }} gap={2}>
+            <Button variant={'secondary'} onClick={closeModal}>
+              Cancel
+            </Button>
+            <Button variant={'danger'} onClick={deleteDocument}>
+              Delete
+            </Button>
+          </Flex>
+        </Flex>
+      </Modal>
+    </>
   );
 };
 

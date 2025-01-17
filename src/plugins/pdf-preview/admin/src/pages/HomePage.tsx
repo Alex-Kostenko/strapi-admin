@@ -33,7 +33,7 @@ interface File {
   publishedAt: string;
 }
 
-interface IReplay {
+export interface IReplay {
   id: number;
   documentId: string;
   name: string;
@@ -68,6 +68,10 @@ export default function HomePage() {
     getReplays();
   }, [filter]);
 
+  const updateReplays = (documentId: string) => {
+    setReplays((prev) => ({ data: prev.data.filter((item) => item.documentId !== documentId) }));
+  };
+
   return (
     <>
       <header
@@ -94,8 +98,9 @@ export default function HomePage() {
       </header>
       <div
         style={{
-          width: '90%',
-          margin: '56px auto',
+          width: '100%',
+          margin: '56px 0',
+          padding: '0 20px',
           display: 'flex',
           flexDirection: 'column',
           gap: 10,
@@ -108,7 +113,7 @@ export default function HomePage() {
               .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
               .map((rep) => (
                 <Grid.Item key={rep.id} gap={5} col={3} m={4} s={6}>
-                  <Card {...rep} pdfPath={rep.file.url}></Card>
+                  <Card {...rep} pdfPath={rep.file.url} updateReplays={updateReplays}></Card>
                 </Grid.Item>
               ))}
         </Grid.Root>

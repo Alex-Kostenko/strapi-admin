@@ -5,9 +5,10 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
+  style?: CSSProperties;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, style = {} }) => {
   const modalRoot = document.getElementById('modal-root');
 
   useEffect(() => {
@@ -37,10 +38,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '#fff',
     padding: '20px 40px',
     borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    background: '#212134',
+    border: 0,
+    color: 'white',
     zIndex: 1001,
     width: '90%',
     height: '90%',
@@ -67,12 +69,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     height: 32,
     fontSize: 32,
     lineHeight: 0.4,
+    color: 'white',
   };
 
   return ReactDOM.createPortal(
     <>
       <div style={backdropStyles} onClick={onClose} />
-      <dialog open style={modalStyles}>
+      <dialog open style={{ ...modalStyles, ...style }}>
         <button style={closeButtonStyles} onClick={onClose} aria-label="Close modal">
           &times;
         </button>

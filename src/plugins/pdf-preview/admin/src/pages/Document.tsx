@@ -72,7 +72,7 @@ const Document = () => {
         justifyContent={{ initial: 'space-between' }}
         gap={2}
       >
-        <LinkButton style={{ width: 200, height: 30 }} tag={Link} to={'../'}>
+        <LinkButton style={{ width: 200, height: 32 }} tag={Link} to={'../'}>
           Back
         </LinkButton>
         <Button onClick={() => setIsDocumentOpen(true)}>View document</Button>
