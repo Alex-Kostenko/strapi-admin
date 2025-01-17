@@ -20,8 +20,6 @@ function imageUrlToBase64<DataType extends Record<string, any>>(
     if (obj.image && obj.image.url) {
       const filePath = path.join(__dirname, "../../../public", obj.image.url);
 
-      console.log("path:", filePath || "none");
-
       try {
         const base64 = fs.readFileSync(filePath, { encoding: "base64" });
         obj.image.base64 = `data:image/${getFileExtension(obj.image.url)};base64,${base64}`;

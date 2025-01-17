@@ -23,7 +23,6 @@ class RequestService {
 
     if (!res.ok) {
       const data = await res.json();
-      console.log(data);
       throw new Error(`API request failed ${path} : ${res.status} ${res.statusText} \n${data}`);
     }
     return res;
@@ -78,17 +77,17 @@ class RequestService {
     return await res.json();
   }
 
-  async delete<T>(
+  async delete(
     path: string,
     init: {
       headers?: any;
     } = {}
-  ): Promise<T> {
+  ): Promise<Response> {
     const res = await this.request(path, 'DELETE', {
       ...init,
     });
 
-    return await res.json();
+    return await res;
   }
 }
 
