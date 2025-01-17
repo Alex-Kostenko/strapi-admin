@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-01-07T12:36:09.671Z"
+    "x-generation-date": "2025-01-17T11:36:33.427Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6049,7 +6049,8 @@
               "name",
               "email",
               "message",
-              "file"
+              "file",
+              "state"
             ],
             "type": "object",
             "properties": {
@@ -6073,6 +6074,13 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "read",
+                  "unread"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -6136,7 +6144,8 @@
           "name",
           "email",
           "message",
-          "file"
+          "file",
+          "state"
         ],
         "properties": {
           "id": {
@@ -6753,6 +6762,13 @@
               }
             }
           },
+          "state": {
+            "type": "string",
+            "enum": [
+              "read",
+              "unread"
+            ]
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -6939,6 +6955,13 @@
                       }
                     }
                   }
+                },
+                "state": {
+                  "type": "string",
+                  "enum": [
+                    "read",
+                    "unread"
+                  ]
                 },
                 "createdAt": {
                   "type": "string",

@@ -438,6 +438,9 @@ export interface ApiContactUsContactUs extends Struct.CollectionTypeSchema {
     message: Schema.Attribute.Text & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.Enumeration<['read', 'unread']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'unread'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

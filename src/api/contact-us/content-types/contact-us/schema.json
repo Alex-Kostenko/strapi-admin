@@ -25,15 +25,24 @@
       "required": true
     },
     "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "read",
+        "unread"
       ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      "required": true,
+      "default": "unread"
     }
   }
 }
