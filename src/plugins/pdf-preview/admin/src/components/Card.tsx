@@ -38,27 +38,26 @@ interface CardProps {
 
 const textStyle = {
   textOverflow: 'ellipsis',
-  // width: 286,
   display: '-webkit-box',
   WebkitBoxOrient: 'vertical',
-  lineHeight: 1.5,
-  maxHeight: 'calc(1.5em * 3)',
+  // maxHeight: 'calc(1.6rem * 3)',
+  // height: '100%',
   overflow: 'hidden',
   WebkitLineClamp: '3',
 };
 
 const cardStyle = {
   width: '100%',
-  height: 192,
-  padding: '10px 0',
+  height: 250,
 };
 
 const contentStyle = {
   display: 'flex',
   flexDirection: 'column',
-  height: 166,
+  height: '100%',
   width: '100%',
   gap: 5,
+  padding: 16,
 };
 
 const deleteStyle = {
@@ -113,55 +112,62 @@ const CardComponent = ({
   return (
     <>
       <Card style={cardStyle}>
-        <CardBody>
-          <CardContent style={contentStyle}>
-            <Flex justifyContent={'space-between'}>
-              <CardTitle>Name: {name}</CardTitle>
-              <Trash style={deleteStyle} onClick={openModal} />
-            </Flex>
-            <Divider />
-            <CardTitle>Email: {email}</CardTitle>
-            <Divider />
-            <CardTitle style={textStyle}>Message: {message}</CardTitle>
-            <Divider />
+        <CardContent style={contentStyle}>
+          <Flex justifyContent={'space-between'}>
+            <CardTitle>
+              <Typography fontSize="1.6rem"> Name: {name}</Typography>
+            </CardTitle>
+            <Trash style={deleteStyle} onClick={openModal} />
+          </Flex>
+          <Divider />
+          <CardTitle>
+            <Typography fontSize="1.6rem">Email: {email}</Typography>
+          </CardTitle>
+          <Divider />
+          <CardTitle style={textStyle}>
+            <Typography fontSize="1.6rem">Message: {message}</Typography>
+          </CardTitle>
+          <Divider />
+          <CardTitle>
+            <Typography fontSize="1.6rem">Created: {localeDate}</Typography>
+          </CardTitle>
+          <Divider />
 
+          <div
+            style={{
+              marginTop: 'auto',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
             <div
               style={{
-                marginTop: 'auto',
                 display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
+                flexDirection: 'column',
+                gap: 5,
               }}
             >
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 5,
+              <Checkbox
+                checked={read === 'read' ? true : false}
+                onCheckedChange={() => {
+                  readDocument();
+                  setRead((prev) => (prev === 'read' ? 'unread' : 'read'));
                 }}
               >
-                <CardTitle>{localeDate}</CardTitle>
-                <Checkbox
-                  checked={read === 'read' ? true : false}
-                  onCheckedChange={() => {
-                    readDocument();
-                    setRead((prev) => (prev === 'read' ? 'unread' : 'read'));
-                  }}
-                >
-                  Checked
-                </Checkbox>
-              </div>
-              <LinkButton
-                style={{ width: '45%' }}
-                tag={Link}
-                to={'document/' + pdfPath.substring(9, pdfPath.length - 4)}
-                state={documentState}
-              >
-                View more
-              </LinkButton>
+                <Typography fontSize="1.6rem">Checked</Typography>
+              </Checkbox>
             </div>
-          </CardContent>
-        </CardBody>
+            <LinkButton
+              style={{ width: '45%' }}
+              tag={Link}
+              to={'document/' + pdfPath.substring(9, pdfPath.length - 4)}
+              state={documentState}
+            >
+              <Typography fontSize="1.6rem">View more</Typography>
+            </LinkButton>
+          </div>
+        </CardContent>
       </Card>
       <Modal
         isOpen={isModalOpen}

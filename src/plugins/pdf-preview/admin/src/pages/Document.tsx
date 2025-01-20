@@ -77,9 +77,11 @@ const Document = () => {
         </LinkButton>
         <Button onClick={() => setIsDocumentOpen(true)}>View document</Button>
       </Flex>
-      <Typography>Name: {name}</Typography>
-      <Typography>Email: {email}</Typography>
-      <Typography style={{ maxWidth: 700 }}>Message: {message}</Typography>
+      <Typography fontSize="1.6rem">Name: {name}</Typography>
+      <Typography fontSize="1.6rem">Email: {email}</Typography>
+      <Typography style={{ maxWidth: 700 }} fontSize="1.6rem">
+        Message: {message}
+      </Typography>
       <Modal isOpen={isDocumentOpen} onClose={() => setIsDocumentOpen(false)}>
         <Viewer
           fileUrl={`/uploads/${path}.pdf`}
