@@ -1,5 +1,79 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ListItemListItem extends Struct.ComponentSchema {
+  collectionName: 'components_list_item_list_items';
+  info: {
+    description: '';
+    displayName: 'ListItem';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface ListList extends Struct.ComponentSchema {
+  collectionName: 'components_list_lists';
+  info: {
+    displayName: 'List';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'list-item.list-item', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SkillSkill extends Struct.ComponentSchema {
+  collectionName: 'components_skill_skill_s';
+  info: {
+    displayName: 'skill ';
+    icon: 'cursor';
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface StackStack extends Struct.ComponentSchema {
+  collectionName: 'components_stack_stacks';
+  info: {
+    displayName: 'Stack';
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<
+      [
+        'ReactJS',
+        'Redux',
+        'NextJS',
+        'JavaScript',
+        'TypeScript',
+        'Astro',
+        'Figma',
+        'NestJS',
+        'Node.js',
+        'Express.js',
+        'PrismaORM',
+        'TypeORM',
+        'SQL',
+        'NoSQL',
+        'AWS',
+        'Azure',
+        'Docker',
+        'Kubernetes',
+        'Terraform',
+        'Jenkins',
+        'Shell',
+        'Vitest',
+        'Jest',
+        'Git',
+        'GitHub',
+        'GitLab',
+        'Bitbucket',
+        'Jira',
+      ]
+    >;
+  };
+}
+
 export interface TechnologyTechnology extends Struct.ComponentSchema {
   collectionName: 'components_technology_technologies';
   info: {
@@ -11,10 +85,30 @@ export interface TechnologyTechnology extends Struct.ComponentSchema {
   };
 }
 
+export interface WorkScheduleWorkSchedule extends Struct.ComponentSchema {
+  collectionName: 'components_work_schedule_work_schedules';
+  info: {
+    description: '';
+    displayName: 'Work schedule';
+    icon: 'archive';
+  };
+  attributes: {
+    type: Schema.Attribute.Enumeration<
+      ['Full-time', 'Part-time', 'Remote', 'Office', 'Hybrid']
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'list-item.list-item': ListItemListItem;
+      'list.list': ListList;
+      'skill.skill': SkillSkill;
+      'stack.stack': StackStack;
       'technology.technology': TechnologyTechnology;
+      'work-schedule.work-schedule': WorkScheduleWorkSchedule;
     }
   }
 }

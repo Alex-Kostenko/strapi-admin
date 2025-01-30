@@ -747,6 +747,76 @@ export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVacancyReplayVacancyReplay
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'vacancy_replays';
+  info: {
+    displayName: 'Vacancy Replay';
+    pluralName: 'vacancy-replays';
+    singularName: 'vacancy-replay';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    file: Schema.Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vacancy-replay.vacancy-replay'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    state: Schema.Attribute.Enumeration<['read', 'unread']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVacancyVacancy extends Struct.CollectionTypeSchema {
+  collectionName: 'vacancies';
+  info: {
+    description: '';
+    displayName: 'Vacancy';
+    pluralName: 'vacancies';
+    singularName: 'vacancy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Component<'list.list', true>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vacancy.vacancy'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recruiter: Schema.Attribute.Relation<'manyToOne', 'api::worker.worker'>;
+    skills: Schema.Attribute.Component<'skill.skill', true> &
+      Schema.Attribute.Required;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    workType: Schema.Attribute.Component<'work-schedule.work-schedule', true> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ApiWorkerWorker extends Struct.CollectionTypeSchema {
   collectionName: 'workers';
   info: {
@@ -763,7 +833,9 @@ export interface ApiWorkerWorker extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
+    email: Schema.Attribute.String;
     experience: Schema.Attribute.Date & Schema.Attribute.Required;
+    linkedIn: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -774,41 +846,12 @@ export interface ApiWorkerWorker extends Struct.CollectionTypeSchema {
     photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     position: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    stack: Schema.Attribute.Enumeration<
-      [
-        'ReactJS',
-        'Redux',
-        'NextJS',
-        'JavaScript',
-        'TypeScript',
-        'Astro',
-        'Figma',
-        'NestJS',
-        'Node.js',
-        'Express.js',
-        'PrismaORM',
-        'TypeORM',
-        'SQL',
-        'NoSQL',
-        'AWS',
-        'Azure',
-        'Docker',
-        'Kubernetes',
-        'Terraform',
-        'Jenkins',
-        'Shell',
-        'Vitest',
-        'Jest',
-        'Git',
-        'GitHub',
-        'GitLab',
-        'Bitbucket',
-        'Jira',
-      ]
-    >;
+    stack: Schema.Attribute.Component<'stack.stack', true>;
+    telegram: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    vacancies: Schema.Attribute.Relation<'oneToMany', 'api::vacancy.vacancy'>;
   };
 }
 
@@ -1329,6 +1372,8 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::step.step': ApiStepStep;
       'api::technology.technology': ApiTechnologyTechnology;
+      'api::vacancy-replay.vacancy-replay': ApiVacancyReplayVacancyReplay;
+      'api::vacancy.vacancy': ApiVacancyVacancy;
       'api::worker.worker': ApiWorkerWorker;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -37,37 +37,24 @@
       "required": true
     },
     "stack": {
-      "type": "enumeration",
-      "enum": [
-        "ReactJS",
-        "Redux",
-        "NextJS",
-        "JavaScript",
-        "TypeScript",
-        "Astro",
-        "Figma",
-        "NestJS",
-        "Node.js",
-        "Express.js",
-        "PrismaORM",
-        "TypeORM",
-        "SQL",
-        "NoSQL",
-        "AWS",
-        "Azure",
-        "Docker",
-        "Kubernetes",
-        "Terraform",
-        "Jenkins",
-        "Shell",
-        "Vitest",
-        "Jest",
-        "Git",
-        "GitHub",
-        "GitLab",
-        "Bitbucket",
-        "Jira"
-      ]
+      "type": "component",
+      "repeatable": true,
+      "component": "stack.stack"
+    },
+    "vacancies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vacancy.vacancy",
+      "mappedBy": "recruiter"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "linkedIn": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
     }
   }
 }
