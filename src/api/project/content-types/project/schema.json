@@ -92,6 +92,81 @@
       "relation": "manyToMany",
       "target": "api::service.service",
       "mappedBy": "projects"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z][^\\s/]*$"
+    },
+    "challengeTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "default": "Percona had a lot of new ideas and requirements for the complex topic of database monitoring and management."
+    },
+    "challengeSubtitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "required": true,
+      "default": "With a multi-year roadmap and growing backlog, they needed a telemetry project to better understand user needs, as their existing system couldn’t support their expanding requirements or enable data-driven decisions."
+    },
+    "challengeDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "default": "To address this issue, they required a service that could overcome data collection challenges and provide information to help structure and prioritize the next phases of product development. The telemetry service needed to be lightweight, scalable, and user-friendly. As the current teams were already at capacity and focused on essential features, they were doubtful they could fit it into their packed schedule anytime soon. Percona turned to Implex to design and implement a revamped telemetry service that would be highly configurable and easy to modify.",
+      "required": true
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "required": true,
+      "default": "The new Telemetry service enhances Percona's decision-making by collecting client usage data, enabling the prioritization of features and improving product development. This scalable, high-quality solution supports timely releases and efficient software management."
+    },
+    "tracking": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json",
+      "required": true
+    },
+    "stack": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "technology.technology"
+    },
+    "partner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::partner.partner",
+      "inversedBy": "projects"
     }
   }
 }

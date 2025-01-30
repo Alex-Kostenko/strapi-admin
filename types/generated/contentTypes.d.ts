@@ -468,6 +468,7 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -541,6 +542,30 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    challengeDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'To address this issue, they required a service that could overcome data collection challenges and provide information to help structure and prioritize the next phases of product development. The telemetry service needed to be lightweight, scalable, and user-friendly. As the current teams were already at capacity and focused on essential features, they were doubtful they could fit it into their packed schedule anytime soon. Percona turned to Implex to design and implement a revamped telemetry service that would be highly configurable and easy to modify.'>;
+    challengeSubtitle: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'With a multi-year roadmap and growing backlog, they needed a telemetry project to better understand user needs, as their existing system couldn\u2019t support their expanding requirements or enable data-driven decisions.'>;
+    challengeTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'Percona\u00A0had a lot of new ideas and requirements for the complex topic of database monitoring and management.'>;
     clientSinceYear: Schema.Attribute.Date &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -552,6 +577,14 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<"The new Telemetry service enhances Percona's decision-making by collecting client usage data, enabling the prioritization of features and improving product development. This scalable, high-quality solution supports timely releases and efficient software management.">;
     image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -570,6 +603,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::project.project'
     >;
+    partner: Schema.Attribute.Relation<'manyToOne', 'api::partner.partner'>;
     project_domains: Schema.Attribute.Relation<
       'manyToMany',
       'api::project-domain.project-domain'
@@ -583,6 +617,19 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         };
       }>;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    stack: Schema.Attribute.Component<'technology.technology', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     subTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -595,6 +642,13 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'api::technology.technology'
     >;
     title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tracking: Schema.Attribute.JSON &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -687,6 +741,71 @@ export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWorkerWorker extends Struct.CollectionTypeSchema {
+  collectionName: 'workers';
+  info: {
+    description: '';
+    displayName: 'worker';
+    pluralName: 'workers';
+    singularName: 'worker';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    experience: Schema.Attribute.Date & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::worker.worker'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    position: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    stack: Schema.Attribute.Enumeration<
+      [
+        'ReactJS',
+        'Redux',
+        'NextJS',
+        'JavaScript',
+        'TypeScript',
+        'Astro',
+        'Figma',
+        'NestJS',
+        'Node.js',
+        'Express.js',
+        'PrismaORM',
+        'TypeORM',
+        'SQL',
+        'NoSQL',
+        'AWS',
+        'Azure',
+        'Docker',
+        'Kubernetes',
+        'Terraform',
+        'Jenkins',
+        'Shell',
+        'Vitest',
+        'Jest',
+        'Git',
+        'GitHub',
+        'GitLab',
+        'Bitbucket',
+        'Jira',
+      ]
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1210,6 +1329,7 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::step.step': ApiStepStep;
       'api::technology.technology': ApiTechnologyTechnology;
+      'api::worker.worker': ApiWorkerWorker;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

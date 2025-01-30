@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workers",
+  "info": {
+    "singularName": "worker",
+    "pluralName": "workers",
+    "displayName": "worker",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "experience": {
+      "type": "date",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "stack": {
+      "type": "enumeration",
+      "enum": [
+        "ReactJS",
+        "Redux",
+        "NextJS",
+        "JavaScript",
+        "TypeScript",
+        "Astro",
+        "Figma",
+        "NestJS",
+        "Node.js",
+        "Express.js",
+        "PrismaORM",
+        "TypeORM",
+        "SQL",
+        "NoSQL",
+        "AWS",
+        "Azure",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Jenkins",
+        "Shell",
+        "Vitest",
+        "Jest",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "Jira"
+      ]
+    }
+  }
+}
