@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ListItemWithTitleListItemWithTitle
+  extends Struct.ComponentSchema {
+  collectionName: 'components_list_item_with_title_list_item_with_titles';
+  info: {
+    displayName: 'List Item With Title';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListItemListItem extends Struct.ComponentSchema {
   collectionName: 'components_list_item_list_items';
   info: {
@@ -11,9 +23,23 @@ export interface ListItemListItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ListWithTitlesListWithTitles extends Struct.ComponentSchema {
+  collectionName: 'components_list_with_titles_list_with_titles';
+  info: {
+    displayName: 'List With Titles';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<
+      'list-item-with-title.list-item-with-title',
+      true
+    >;
+  };
+}
+
 export interface ListList extends Struct.ComponentSchema {
   collectionName: 'components_list_lists';
   info: {
+    description: '';
     displayName: 'List';
   };
   attributes: {
@@ -103,7 +129,9 @@ export interface WorkScheduleWorkSchedule extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'list-item-with-title.list-item-with-title': ListItemWithTitleListItemWithTitle;
       'list-item.list-item': ListItemListItem;
+      'list-with-titles.list-with-titles': ListWithTitlesListWithTitles;
       'list.list': ListList;
       'skill.skill': SkillSkill;
       'stack.stack': StackStack;

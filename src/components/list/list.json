@@ -1,7 +1,8 @@
 {
   "collectionName": "components_list_lists",
   "info": {
-    "displayName": "List"
+    "displayName": "List",
+    "description": ""
   },
   "options": {},
   "attributes": {

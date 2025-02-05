@@ -817,6 +817,38 @@ export interface ApiVacancyVacancy extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiWhoWeAreWhoWeAre extends Struct.CollectionTypeSchema {
+  collectionName: 'who_we_ares';
+  info: {
+    description: '';
+    displayName: 'Who we are';
+    pluralName: 'who-we-ares';
+    singularName: 'who-we-are';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    list: Schema.Attribute.Component<
+      'list-with-titles.list-with-titles',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::who-we-are.who-we-are'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiWorkerWorker extends Struct.CollectionTypeSchema {
   collectionName: 'workers';
   info: {
@@ -1374,6 +1406,7 @@ declare module '@strapi/strapi' {
       'api::technology.technology': ApiTechnologyTechnology;
       'api::vacancy-replay.vacancy-replay': ApiVacancyReplayVacancyReplay;
       'api::vacancy.vacancy': ApiVacancyVacancy;
+      'api::who-we-are.who-we-are': ApiWhoWeAreWhoWeAre;
       'api::worker.worker': ApiWorkerWorker;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
