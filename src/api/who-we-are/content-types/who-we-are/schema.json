@@ -12,10 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "list": {
+    "services": {
       "type": "component",
       "repeatable": false,
       "component": "list-with-titles.list-with-titles"
+    },
+    "story": {
+      "type": "component",
+      "repeatable": false,
+      "component": "list-with-years.list-with-years",
+      "required": true
     }
   }
 }

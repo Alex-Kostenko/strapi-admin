@@ -832,10 +832,6 @@ export interface ApiWhoWeAreWhoWeAre extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    list: Schema.Attribute.Component<
-      'list-with-titles.list-with-titles',
-      false
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -843,6 +839,15 @@ export interface ApiWhoWeAreWhoWeAre extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<
+      'list-with-titles.list-with-titles',
+      false
+    >;
+    story: Schema.Attribute.Component<
+      'list-with-years.list-with-years',
+      false
+    > &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

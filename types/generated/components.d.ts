@@ -12,6 +12,26 @@ export interface ListItemWithTitleListItemWithTitle
   };
 }
 
+export interface ListItemWithYearListItemWithYear
+  extends Struct.ComponentSchema {
+  collectionName: 'components_list_item_with_year_list_item_with_years';
+  info: {
+    displayName: 'List item with year';
+  };
+  attributes: {
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    year: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 2019;
+        },
+        number
+      >;
+  };
+}
+
 export interface ListItemListItem extends Struct.ComponentSchema {
   collectionName: 'components_list_item_list_items';
   info: {
@@ -31,6 +51,19 @@ export interface ListWithTitlesListWithTitles extends Struct.ComponentSchema {
   attributes: {
     items: Schema.Attribute.Component<
       'list-item-with-title.list-item-with-title',
+      true
+    >;
+  };
+}
+
+export interface ListWithYearsListWithYears extends Struct.ComponentSchema {
+  collectionName: 'components_list_with_years_list_with_years';
+  info: {
+    displayName: 'List with years';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<
+      'list-item-with-year.list-item-with-year',
       true
     >;
   };
@@ -130,8 +163,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'list-item-with-title.list-item-with-title': ListItemWithTitleListItemWithTitle;
+      'list-item-with-year.list-item-with-year': ListItemWithYearListItemWithYear;
       'list-item.list-item': ListItemListItem;
       'list-with-titles.list-with-titles': ListWithTitlesListWithTitles;
+      'list-with-years.list-with-years': ListWithYearsListWithYears;
       'list.list': ListList;
       'skill.skill': SkillSkill;
       'stack.stack': StackStack;

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-02-05T14:25:30.588Z"
+    "x-generation-date": "2025-02-07T07:56:52.276Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -18175,10 +18175,16 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "story"
+            ],
             "type": "object",
             "properties": {
-              "list": {
+              "services": {
                 "$ref": "#/components/schemas/ListWithTitlesListWithTitlesComponent"
+              },
+              "story": {
+                "$ref": "#/components/schemas/ListWithYearsListWithYearsComponent"
               },
               "locale": {
                 "type": "string"
@@ -18238,6 +18244,9 @@
       },
       "WhoWeAre": {
         "type": "object",
+        "required": [
+          "story"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -18245,8 +18254,11 @@
           "documentId": {
             "type": "string"
           },
-          "list": {
+          "services": {
             "$ref": "#/components/schemas/ListWithTitlesListWithTitlesComponent"
+          },
+          "story": {
+            "$ref": "#/components/schemas/ListWithYearsListWithYearsComponent"
           },
           "createdAt": {
             "type": "string",
@@ -18548,8 +18560,11 @@
                 "documentId": {
                   "type": "string"
                 },
-                "list": {
+                "services": {
                   "$ref": "#/components/schemas/ListWithTitlesListWithTitlesComponent"
+                },
+                "story": {
+                  "$ref": "#/components/schemas/ListWithYearsListWithYearsComponent"
                 },
                 "createdAt": {
                   "type": "string",
@@ -18642,6 +18657,37 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListItemWithTitleListItemWithTitleComponent"
+            }
+          }
+        }
+      },
+      "ListItemWithYearListItemWithYearComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          }
+        }
+      },
+      "ListWithYearsListWithYearsComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListItemWithYearListItemWithYearComponent"
             }
           }
         }
