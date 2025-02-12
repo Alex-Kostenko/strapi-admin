@@ -13,26 +13,45 @@ function getFileExtension(filename: string): string | null {
   return ext ? ext : null;
 }
 
-function imageUrlToBase64<DataType extends Record<string, any>>(
-  dataArray: DataType[]
-): any[] {
-  return dataArray.map((obj) => {
-    if (obj.image && obj.image.url) {
-      const filePath = path.join(__dirname, "../../../public", obj.image.url);
+function imageUrlToBase64(data: Record<string, any>) {
+  if (Array.isArray(data)) {
+    return data.map(imageUrlToBase64);
+  } else if (typeof data === "object" && data !== null) {
+    const newData = { ...data };
 
-      try {
-        const base64 = fs.readFileSync(filePath, { encoding: "base64" });
-        obj.image.base64 = `data:image/${getFileExtension(obj.image.url)};base64,${base64}`;
-      } catch (error) {
-        console.error(`Error reading file at ${filePath}:`, error);
+    for (const key in newData) {
+      if (typeof newData[key] === "object" && newData[key] !== null) {
+        if ("url" in newData[key] && typeof newData[key].url === "string") {
+          const filePath = path.join(
+            __dirname,
+            "../../../public",
+            newData[key].url
+          );
+
+          try {
+            const base64 = fs.readFileSync(filePath, { encoding: "base64" });
+
+            newData[key] = {
+              ...newData[key],
+              base64: `data:image/${getFileExtension(newData[key].url)};base64,${base64}`,
+            };
+          } catch (error) {
+            console.error(`Error reading file at ${filePath}:`, error);
+          }
+        } else {
+          newData[key] = imageUrlToBase64(newData[key]);
+        }
       }
     }
 
-    return obj;
-  });
+    return newData;
+  }
+
+  return data;
 }
 
 function getMeta(ctx: Context, data: any[]) {
+  if (!data) return {};
   const total = data.length;
   const pagination: Record<string, any> = ctx.query.pagination;
 

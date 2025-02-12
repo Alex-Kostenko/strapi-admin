@@ -26,4 +26,5 @@ export default [
       },
     },
   },
+  "global::image-to-base64",
 ];
