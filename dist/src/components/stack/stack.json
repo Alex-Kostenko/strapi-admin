@@ -1,0 +1,42 @@
+{
+    "collectionName": "components_stack_stacks",
+    "info": {
+        "displayName": "Stack"
+    },
+    "options": {},
+    "attributes": {
+        "name": {
+            "type": "enumeration",
+            "enum": [
+                "ReactJS",
+                "Redux",
+                "NextJS",
+                "JavaScript",
+                "TypeScript",
+                "Astro",
+                "Figma",
+                "NestJS",
+                "Node.js",
+                "Express.js",
+                "PrismaORM",
+                "TypeORM",
+                "SQL",
+                "NoSQL",
+                "AWS",
+                "Azure",
+                "Docker",
+                "Kubernetes",
+                "Terraform",
+                "Jenkins",
+                "Shell",
+                "Vitest",
+                "Jest",
+                "Git",
+                "GitHub",
+                "GitLab",
+                "Bitbucket",
+                "Jira"
+            ]
+        }
+    }
+}

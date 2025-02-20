@@ -1,0 +1,56 @@
+{
+    "kind": "collectionType",
+    "collectionName": "vacancies",
+    "info": {
+        "singularName": "vacancy",
+        "pluralName": "vacancies",
+        "displayName": "Vacancy",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "skills": {
+            "type": "component",
+            "repeatable": true,
+            "component": "skill.skill",
+            "required": true
+        },
+        "workType": {
+            "type": "component",
+            "repeatable": true,
+            "component": "work-schedule.work-schedule",
+            "required": true
+        },
+        "description": {
+            "type": "component",
+            "repeatable": true,
+            "component": "list.list"
+        },
+        "recruiter": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::worker.worker",
+            "inversedBy": "vacancies"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "slug": {
+            "type": "string",
+            "required": true,
+            "regex": "^[a-z][^\\s/]*$"
+        }
+    }
+}

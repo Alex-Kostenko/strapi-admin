@@ -1,0 +1,46 @@
+{
+    "kind": "collectionType",
+    "collectionName": "project_domains",
+    "info": {
+        "singularName": "project-domain",
+        "pluralName": "project-domains",
+        "displayName": "ProjectDomain",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "slug": {
+            "type": "string",
+            "regex": "^[a-z][^\\s/]*$",
+            "required": true,
+            "unique": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "name": {
+            "type": "string",
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "projects": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::project.project",
+            "mappedBy": "project_domains"
+        }
+    }
+}

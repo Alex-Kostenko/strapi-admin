@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_work_schedule_work_schedules",
+    "info": {
+        "displayName": "Work schedule",
+        "icon": "archive",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "type": {
+            "type": "enumeration",
+            "enum": [
+                "Full-time",
+                "Part-time",
+                "Remote",
+                "Office",
+                "Hybrid"
+            ],
+            "required": true
+        }
+    }
+}

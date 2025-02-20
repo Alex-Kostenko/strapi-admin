@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_skill_skill_s",
+    "info": {
+        "displayName": "skill ",
+        "icon": "cursor"
+    },
+    "options": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

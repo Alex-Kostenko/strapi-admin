@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_list_with_titles_list_with_titles",
+    "info": {
+        "displayName": "List With Titles"
+    },
+    "options": {},
+    "attributes": {
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "list-item-with-title.list-item-with-title"
+        }
+    }
+}

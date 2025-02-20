@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_list_with_years_list_with_years",
+    "info": {
+        "displayName": "List with years"
+    },
+    "options": {},
+    "attributes": {
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "list-item-with-year.list-item-with-year"
+        }
+    }
+}
