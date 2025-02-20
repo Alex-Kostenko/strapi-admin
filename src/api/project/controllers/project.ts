@@ -1,7 +1,24 @@
-/**
- * project controller
- */
+import { Context } from "koa";
+import { factories } from "@strapi/strapi";
+import {
+  getMeta,
+  imageUrlToBase64,
+  removeUndefinedValues,
+} from "../../../utils";
 
-import { factories } from '@strapi/strapi'
+export default factories.createCoreController(
+  "api::project.project",
+  ({ strapi }) => ({
+    async find(ctx: Context) {
+      const data = await strapi.entityService.findMany("api::project.project", {
+        ...ctx.query,
+      });
 
-export default factories.createCoreController('api::project.project');
+      const response = imageUrlToBase64(data);
+
+      const meta = getMeta(ctx, data);
+
+      ctx.body = { data: response, meta: removeUndefinedValues(meta) };
+    },
+  })
+);
