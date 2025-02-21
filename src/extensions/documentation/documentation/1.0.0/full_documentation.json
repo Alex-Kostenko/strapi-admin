@@ -14,10 +14,13 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-02-20T13:13:03.872Z"
+    "x-generation-date": "2025-02-21T10:45:22.941Z"
   },
   "x-strapi-config": {
-    "plugins": ["upload", "users-permissions"]
+    "plugins": [
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
@@ -99,7 +102,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -269,7 +274,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [],
         "operationId": "post/comments",
         "requestBody": {
@@ -348,7 +355,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -426,7 +435,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -515,7 +526,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -595,7 +608,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -765,7 +780,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [],
         "operationId": "post/contact-uses",
         "requestBody": {
@@ -844,7 +861,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -922,7 +941,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1011,7 +1032,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1091,7 +1114,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -1261,7 +1286,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [],
         "operationId": "post/partners",
         "requestBody": {
@@ -1340,7 +1367,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1418,7 +1447,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1507,7 +1538,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1587,7 +1620,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -1757,7 +1792,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [],
         "operationId": "post/projects",
         "requestBody": {
@@ -1836,7 +1873,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1914,7 +1953,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2003,7 +2044,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2083,7 +2126,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2253,7 +2298,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [],
         "operationId": "post/project-domains",
         "requestBody": {
@@ -2332,7 +2379,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2410,7 +2459,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2499,7 +2550,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2579,7 +2632,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2749,7 +2804,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [],
         "operationId": "post/services",
         "requestBody": {
@@ -2828,7 +2885,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2906,7 +2965,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2995,7 +3056,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3075,7 +3138,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3245,7 +3310,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [],
         "operationId": "post/steps",
         "requestBody": {
@@ -3324,7 +3391,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3402,7 +3471,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3491,7 +3562,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3571,7 +3644,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3741,7 +3816,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [],
         "operationId": "post/technologies",
         "requestBody": {
@@ -3820,7 +3897,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3898,7 +3977,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3987,7 +4068,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4067,7 +4150,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -4237,7 +4322,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [],
         "operationId": "post/vacancies",
         "requestBody": {
@@ -4316,7 +4403,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4394,7 +4483,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4483,7 +4574,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4563,7 +4656,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -4733,7 +4828,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [],
         "operationId": "post/vacancy-replays",
         "requestBody": {
@@ -4812,7 +4909,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4890,7 +4989,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4979,7 +5080,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5059,7 +5162,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -5229,7 +5334,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [],
         "operationId": "post/who-we-ares",
         "requestBody": {
@@ -5308,7 +5415,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5386,7 +5495,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5475,7 +5586,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5555,7 +5668,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -5725,7 +5840,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [],
         "operationId": "post/workers",
         "requestBody": {
@@ -5804,7 +5921,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5882,7 +6001,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5971,7 +6092,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6006,14 +6129,18 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": ["files"],
+                "required": [
+                  "files"
+                ],
                 "type": "object",
                 "properties": {
                   "path": {
@@ -6076,7 +6203,9 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
@@ -6112,7 +6241,9 @@
     },
     "/upload/files": {
       "get": {
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a list of files",
@@ -6144,7 +6275,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a specific file",
@@ -6171,7 +6304,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Delete a file",
@@ -6200,7 +6335,9 @@
             }
           }
         ],
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Login with a provider",
         "description": "Redirects to provider login before being redirect to /auth/{provider}/callback",
         "responses": {
@@ -6222,7 +6359,9 @@
     },
     "/auth/local": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Local login",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -6273,7 +6412,9 @@
     },
     "/auth/local/register": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Register a user",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -6328,7 +6469,9 @@
     },
     "/auth/{provider}/callback": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Default Callback from provider auth",
         "parameters": [
           {
@@ -6367,7 +6510,9 @@
     },
     "/auth/forgot-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send rest password email",
         "requestBody": {
           "required": true,
@@ -6397,7 +6542,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -6419,7 +6566,9 @@
     },
     "/auth/reset-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Rest user password",
         "requestBody": {
           "required": true,
@@ -6473,7 +6622,9 @@
     },
     "/auth/change-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Update user's own password",
         "requestBody": {
           "required": true,
@@ -6527,7 +6678,9 @@
     },
     "/auth/email-confirmation": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Confirm user email",
         "parameters": [
           {
@@ -6558,7 +6711,9 @@
     },
     "/auth/send-email-confirmation": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send confirmation email",
         "requestBody": {
           "required": true,
@@ -6588,7 +6743,9 @@
                     },
                     "sent": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -6610,7 +6767,9 @@
     },
     "/users-permissions/permissions": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get default generated permissions",
         "responses": {
           "200": {
@@ -6679,7 +6838,9 @@
     },
     "/users-permissions/roles": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "List roles",
         "responses": {
           "200": {
@@ -6738,7 +6899,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a role",
         "requestBody": {
           "$ref": "#/components/requestBodies/Users-Permissions-RoleRequest"
@@ -6753,7 +6916,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -6775,7 +6940,9 @@
     },
     "/users-permissions/roles/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a role",
         "parameters": [
           {
@@ -6840,7 +7007,9 @@
     },
     "/users-permissions/roles/{role}": {
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a role",
         "parameters": [
           {
@@ -6866,7 +7035,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -6886,7 +7057,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a role",
         "parameters": [
           {
@@ -6909,7 +7082,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -6931,7 +7106,9 @@
     },
     "/users": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get list of users",
         "responses": {
           "200": {
@@ -6972,7 +7149,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a user",
         "requestBody": {
           "required": true,
@@ -6980,7 +7159,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -7057,7 +7240,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a user",
         "parameters": [
           {
@@ -7104,7 +7289,9 @@
         }
       },
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a user",
         "parameters": [
           {
@@ -7123,7 +7310,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -7198,7 +7389,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a user",
         "parameters": [
           {
@@ -7251,7 +7444,9 @@
     },
     "/users/me": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get authenticated user info",
         "responses": {
           "200": {
@@ -7289,7 +7484,9 @@
     },
     "/users/count": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get user count",
         "responses": {
           "200": {
@@ -7328,7 +7525,9 @@
     "schemas": {
       "Error": {
         "type": "object",
-        "required": ["error"],
+        "required": [
+          "error"
+        ],
         "properties": {
           "data": {
             "nullable": true,
@@ -7365,10 +7564,18 @@
       },
       "CommentRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "position", "title", "description", "rating"],
+            "required": [
+              "name",
+              "position",
+              "title",
+              "description",
+              "rating"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -7444,7 +7651,13 @@
       },
       "Comment": {
         "type": "object",
-        "required": ["name", "position", "title", "description", "rating"],
+        "required": [
+          "name",
+          "position",
+          "title",
+          "description",
+          "rating"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -7851,10 +8064,18 @@
       },
       "ContactUsRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "email", "message", "file", "state"],
+            "required": [
+              "name",
+              "email",
+              "message",
+              "file",
+              "state"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -7880,7 +8101,10 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["read", "unread"]
+                "enum": [
+                  "read",
+                  "unread"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -7940,7 +8164,13 @@
       },
       "ContactUs": {
         "type": "object",
-        "required": ["name", "email", "message", "file", "state"],
+        "required": [
+          "name",
+          "email",
+          "message",
+          "file",
+          "state"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -8558,7 +8788,10 @@
           },
           "state": {
             "type": "string",
-            "enum": ["read", "unread"]
+            "enum": [
+              "read",
+              "unread"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -8749,7 +8982,10 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["read", "unread"]
+                  "enum": [
+                    "read",
+                    "unread"
+                  ]
                 },
                 "createdAt": {
                   "type": "string",
@@ -8820,7 +9056,9 @@
       },
       "PartnerRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -10019,7 +10257,9 @@
       },
       "ProjectRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "required": [
@@ -11521,10 +11761,15 @@
       },
       "ProjectDomainRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["slug", "name"],
+            "required": [
+              "slug",
+              "name"
+            ],
             "type": "object",
             "properties": {
               "slug": {
@@ -11605,7 +11850,10 @@
       },
       "ProjectDomain": {
         "type": "object",
-        "required": ["slug", "name"],
+        "required": [
+          "slug",
+          "name"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -12717,10 +12965,15 @@
       },
       "ServiceRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["slug", "name"],
+            "required": [
+              "slug",
+              "name"
+            ],
             "type": "object",
             "properties": {
               "slug": {
@@ -12801,7 +13054,10 @@
       },
       "Service": {
         "type": "object",
-        "required": ["slug", "name"],
+        "required": [
+          "slug",
+          "name"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -13913,10 +14169,15 @@
       },
       "StepRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "description"],
+            "required": [
+              "title",
+              "description"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -13983,7 +14244,10 @@
       },
       "Step": {
         "type": "object",
-        "required": ["title", "description"],
+        "required": [
+          "title",
+          "description"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -14372,7 +14636,9 @@
       },
       "TechnologyRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -15560,10 +15826,18 @@
       },
       "VacancyRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "skills", "workType", "image", "slug"],
+            "required": [
+              "title",
+              "skills",
+              "workType",
+              "image",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -15670,7 +15944,13 @@
       },
       "Vacancy": {
         "type": "object",
-        "required": ["title", "skills", "workType", "image", "slug"],
+        "required": [
+          "title",
+          "skills",
+          "workType",
+          "image",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -16831,7 +17111,13 @@
           },
           "type": {
             "type": "string",
-            "enum": ["Full-time", "Part-time", "Remote", "Office", "Hybrid"]
+            "enum": [
+              "Full-time",
+              "Part-time",
+              "Remote",
+              "Office",
+              "Hybrid"
+            ]
           }
         }
       },
@@ -16906,7 +17192,9 @@
       },
       "VacancyReplayRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -16934,7 +17222,10 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["read", "unread"]
+                "enum": [
+                  "read",
+                  "unread"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -17611,7 +17902,10 @@
           },
           "state": {
             "type": "string",
-            "enum": ["read", "unread"]
+            "enum": [
+              "read",
+              "unread"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -17802,7 +18096,10 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["read", "unread"]
+                  "enum": [
+                    "read",
+                    "unread"
+                  ]
                 },
                 "createdAt": {
                   "type": "string",
@@ -17873,10 +18170,14 @@
       },
       "WhoWeAreRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["story"],
+            "required": [
+              "story"
+            ],
             "type": "object",
             "properties": {
               "services": {
@@ -17943,7 +18244,9 @@
       },
       "WhoWeAre": {
         "type": "object",
-        "required": ["story"],
+        "required": [
+          "story"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -18391,7 +18694,9 @@
       },
       "WorkerRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "required": [
@@ -18514,7 +18819,13 @@
       },
       "Worker": {
         "type": "object",
-        "required": ["name", "photo", "experience", "description", "position"],
+        "required": [
+          "name",
+          "photo",
+          "experience",
+          "description",
+          "position"
+        ],
         "properties": {
           "id": {
             "type": "number"
