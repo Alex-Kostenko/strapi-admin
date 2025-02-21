@@ -1,0 +1,1 @@
+import{j as s}from"./strapi-DWk4IUgy.js";import{e as n,n as e,$ as a,d as o}from"./App-DqQcSm7H-vb2ZbdZ0.js";const m=()=>{const{formatMessage:t}=n();return s.jsxs(s.Fragment,{children:[s.jsx(e.Header,{title:t({id:a("header.name"),defaultMessage:"Content"})}),s.jsx(e.Content,{children:s.jsx(o.NoPermissions,{})})]})};export{m as NoPermissions};

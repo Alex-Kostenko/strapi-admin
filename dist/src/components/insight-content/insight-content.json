@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_insight_content_insight_contents",
+    "info": {
+        "displayName": "Insight Content"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "content": {
+            "type": "component",
+            "repeatable": true,
+            "component": "content.content",
+            "required": true
+        }
+    }
+}

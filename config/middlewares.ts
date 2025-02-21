@@ -27,4 +27,5 @@ export default [
     },
   },
   { name: "global::request-logger" },
+  "global::image-to-base64",
 ];

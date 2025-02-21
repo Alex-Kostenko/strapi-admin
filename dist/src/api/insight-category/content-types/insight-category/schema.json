@@ -1,0 +1,32 @@
+{
+    "kind": "collectionType",
+    "collectionName": "insight_categories",
+    "info": {
+        "singularName": "insight-category",
+        "pluralName": "insight-categories",
+        "displayName": "InsightCategory",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "slug": {
+            "type": "string",
+            "regex": "^[a-z][^\\s/]*$",
+            "unique": true,
+            "required": true
+        },
+        "insights": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::insight.insight",
+            "mappedBy": "insight_category"
+        }
+    }
+}

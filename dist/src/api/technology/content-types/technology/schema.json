@@ -19,6 +19,12 @@
             "relation": "manyToMany",
             "target": "api::project.project",
             "mappedBy": "technologies"
+        },
+        "insights": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::insight.insight",
+            "mappedBy": "technologies"
         }
     }
 }
