@@ -28,4 +28,5 @@ exports.default = [
             },
         },
     },
+    { name: "global::request-logger" },
 ];
