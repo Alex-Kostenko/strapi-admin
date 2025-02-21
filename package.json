@@ -8,7 +8,9 @@
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "build:prod": "NODE_ENV=production strapi build",
+    "start:prod": "NODE_ENV=production strapi start"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.3.0",

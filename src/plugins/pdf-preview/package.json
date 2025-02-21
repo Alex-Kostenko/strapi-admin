@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [],
   "type": "commonjs",
   "exports": {
@@ -70,5 +70,5 @@
   "name": "pdf-preview",
   "description": "",
   "license": "MIT",
-  "author": "oleksiychernenko286 <oleksiychernenko286@gmail.com>"
+  "author": "unicode-software"
 }
