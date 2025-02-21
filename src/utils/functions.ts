@@ -38,6 +38,30 @@ function imageUrlToBase64(data: Record<string, any>) {
           } catch (error) {
             console.error(`Error reading file at ${filePath}:`, error);
           }
+        } else if (Array.isArray(newData[key])) {
+          newData[key] = newData[key].map((item: any) => {
+            if (typeof item === "object" && item !== null && "url" in item) {
+              const filePath = path.join(
+                __dirname,
+                "../../../public",
+                item.url
+              );
+
+              try {
+                const base64 = fs.readFileSync(filePath, {
+                  encoding: "base64",
+                });
+
+                return (item = {
+                  ...item,
+                  base64: `data:image/${getFileExtension(item.url)};base64,${base64}`,
+                });
+              } catch (error) {
+                console.error(`Error reading file at ${filePath}:`, error);
+              }
+            }
+            return imageUrlToBase64(item);
+          });
         } else {
           newData[key] = imageUrlToBase64(newData[key]);
         }

@@ -1,5 +1,28 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ContentContent extends Struct.ComponentSchema {
+  collectionName: 'components_content_contents';
+  info: {
+    displayName: 'Content';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images', true>;
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface InsightContentInsightContent extends Struct.ComponentSchema {
+  collectionName: 'components_insight_content_insight_contents';
+  info: {
+    displayName: 'Insight Content';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'content.content', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListItemWithTitleListItemWithTitle
   extends Struct.ComponentSchema {
   collectionName: 'components_list_item_with_title_list_item_with_titles';
@@ -162,6 +185,8 @@ export interface WorkScheduleWorkSchedule extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'content.content': ContentContent;
+      'insight-content.insight-content': InsightContentInsightContent;
       'list-item-with-title.list-item-with-title': ListItemWithTitleListItemWithTitle;
       'list-item-with-year.list-item-with-year': ListItemWithYearListItemWithYear;
       'list-item.list-item': ListItemListItem;
