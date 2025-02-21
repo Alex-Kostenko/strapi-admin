@@ -94,7 +94,7 @@ lcov.info
 pids
 logs
 results
-node_modules
+# node_modules
 .node_history
 
 ############################
@@ -124,7 +124,7 @@ coverage
 .env
 license.txt
 exports
-.strapi
+#.strapi
 #dist
 #build
 .strapi-updater.json
