@@ -809,6 +809,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
+    description: '';
     displayName: 'Service';
     pluralName: 'services';
     singularName: 'service';
@@ -820,6 +821,13 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<"description default value Developing complex systems or applications can be challenging. Uncertainty in feature deployment, inefficient time management, budget overruns, and project conflicts are common. Our project management consultancy service leverages the experiences of others, allowing you to learn from their mistakes and avoid risks.  Let's take your project, project portfolio, processes, resource or release management to the next level!">;
+    features: Schema.Attribute.Component<
+      'list-with-subtitle.list-with-sub-title',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -827,9 +835,12 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    preview: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String & Schema.Attribute.Required;
+    steps: Schema.Attribute.Component<'step-list.step-list', false> &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

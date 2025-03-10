@@ -14,14 +14,17 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-02-17T07:55:44.598Z"
+    "x-generation-date": "2025-03-10T14:59:31.006Z"
   },
   "x-strapi-config": {
-    "plugins": ["upload", "users-permissions"]
+    "plugins": [
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
-      "url": "http://0.0.0.0:1337/api",
+      "url": "http://localhost:1337/api",
       "description": "Development server"
     }
   ],
@@ -99,7 +102,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -269,7 +274,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [],
         "operationId": "post/comments",
         "requestBody": {
@@ -348,7 +355,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -426,7 +435,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -515,7 +526,9 @@
             }
           }
         },
-        "tags": ["Comment"],
+        "tags": [
+          "Comment"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -595,7 +608,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -765,7 +780,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [],
         "operationId": "post/contact-uses",
         "requestBody": {
@@ -844,7 +861,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -922,7 +941,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1011,7 +1032,9 @@
             }
           }
         },
-        "tags": ["Contact-us"],
+        "tags": [
+          "Contact-us"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1091,7 +1114,9 @@
             }
           }
         },
-        "tags": ["Insight"],
+        "tags": [
+          "Insight"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -1261,7 +1286,9 @@
             }
           }
         },
-        "tags": ["Insight"],
+        "tags": [
+          "Insight"
+        ],
         "parameters": [],
         "operationId": "post/insights",
         "requestBody": {
@@ -1340,7 +1367,9 @@
             }
           }
         },
-        "tags": ["Insight"],
+        "tags": [
+          "Insight"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1418,7 +1447,9 @@
             }
           }
         },
-        "tags": ["Insight"],
+        "tags": [
+          "Insight"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1507,7 +1538,9 @@
             }
           }
         },
-        "tags": ["Insight"],
+        "tags": [
+          "Insight"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1587,7 +1620,9 @@
             }
           }
         },
-        "tags": ["Insight-category"],
+        "tags": [
+          "Insight-category"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -1757,7 +1792,9 @@
             }
           }
         },
-        "tags": ["Insight-category"],
+        "tags": [
+          "Insight-category"
+        ],
         "parameters": [],
         "operationId": "post/insight-categories",
         "requestBody": {
@@ -1836,7 +1873,9 @@
             }
           }
         },
-        "tags": ["Insight-category"],
+        "tags": [
+          "Insight-category"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1914,7 +1953,9 @@
             }
           }
         },
-        "tags": ["Insight-category"],
+        "tags": [
+          "Insight-category"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2003,7 +2044,9 @@
             }
           }
         },
-        "tags": ["Insight-category"],
+        "tags": [
+          "Insight-category"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2083,7 +2126,9 @@
             }
           }
         },
-        "tags": ["News-subscriber"],
+        "tags": [
+          "News-subscriber"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2253,7 +2298,9 @@
             }
           }
         },
-        "tags": ["News-subscriber"],
+        "tags": [
+          "News-subscriber"
+        ],
         "parameters": [],
         "operationId": "post/news-subscribers",
         "requestBody": {
@@ -2332,7 +2379,9 @@
             }
           }
         },
-        "tags": ["News-subscriber"],
+        "tags": [
+          "News-subscriber"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2410,7 +2459,9 @@
             }
           }
         },
-        "tags": ["News-subscriber"],
+        "tags": [
+          "News-subscriber"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2499,7 +2550,9 @@
             }
           }
         },
-        "tags": ["News-subscriber"],
+        "tags": [
+          "News-subscriber"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2579,7 +2632,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -2749,7 +2804,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [],
         "operationId": "post/partners",
         "requestBody": {
@@ -2828,7 +2885,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2906,7 +2965,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -2995,7 +3056,9 @@
             }
           }
         },
-        "tags": ["Partner"],
+        "tags": [
+          "Partner"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3075,7 +3138,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3245,7 +3310,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [],
         "operationId": "post/projects",
         "requestBody": {
@@ -3324,7 +3391,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3402,7 +3471,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3491,7 +3562,9 @@
             }
           }
         },
-        "tags": ["Project"],
+        "tags": [
+          "Project"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3571,7 +3644,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -3741,7 +3816,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [],
         "operationId": "post/project-domains",
         "requestBody": {
@@ -3820,7 +3897,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3898,7 +3977,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -3987,7 +4068,9 @@
             }
           }
         },
-        "tags": ["Project-domain"],
+        "tags": [
+          "Project-domain"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4067,7 +4150,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -4237,7 +4322,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [],
         "operationId": "post/services",
         "requestBody": {
@@ -4316,7 +4403,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4394,7 +4483,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4483,7 +4574,9 @@
             }
           }
         },
-        "tags": ["Service"],
+        "tags": [
+          "Service"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4563,7 +4656,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -4733,7 +4828,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [],
         "operationId": "post/steps",
         "requestBody": {
@@ -4812,7 +4909,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4890,7 +4989,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -4979,7 +5080,9 @@
             }
           }
         },
-        "tags": ["Step"],
+        "tags": [
+          "Step"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5059,7 +5162,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -5229,7 +5334,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [],
         "operationId": "post/technologies",
         "requestBody": {
@@ -5308,7 +5415,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5386,7 +5495,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5475,7 +5586,9 @@
             }
           }
         },
-        "tags": ["Technology"],
+        "tags": [
+          "Technology"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5555,7 +5668,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -5725,7 +5840,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [],
         "operationId": "post/vacancies",
         "requestBody": {
@@ -5804,7 +5921,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5882,7 +6001,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -5971,7 +6092,9 @@
             }
           }
         },
-        "tags": ["Vacancy"],
+        "tags": [
+          "Vacancy"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6051,7 +6174,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -6221,7 +6346,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [],
         "operationId": "post/vacancy-replays",
         "requestBody": {
@@ -6300,7 +6427,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6378,7 +6507,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6467,7 +6598,9 @@
             }
           }
         },
-        "tags": ["Vacancy-replay"],
+        "tags": [
+          "Vacancy-replay"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6547,7 +6680,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -6717,7 +6852,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [],
         "operationId": "post/who-we-ares",
         "requestBody": {
@@ -6796,7 +6933,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6874,7 +7013,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -6963,7 +7104,9 @@
             }
           }
         },
-        "tags": ["Who-we-are"],
+        "tags": [
+          "Who-we-are"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -7043,7 +7186,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "sort",
@@ -7213,7 +7358,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [],
         "operationId": "post/workers",
         "requestBody": {
@@ -7292,7 +7439,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -7370,7 +7519,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -7459,7 +7610,9 @@
             }
           }
         },
-        "tags": ["Worker"],
+        "tags": [
+          "Worker"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -7494,14 +7647,18 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
           "content": {
             "multipart/form-data": {
               "schema": {
-                "required": ["files"],
+                "required": [
+                  "files"
+                ],
                 "type": "object",
                 "properties": {
                   "path": {
@@ -7564,7 +7721,9 @@
           }
         },
         "summary": "",
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "requestBody": {
           "description": "Upload files",
           "required": true,
@@ -7600,7 +7759,9 @@
     },
     "/upload/files": {
       "get": {
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a list of files",
@@ -7632,7 +7793,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Get a specific file",
@@ -7659,7 +7822,9 @@
             }
           }
         ],
-        "tags": ["Upload - File"],
+        "tags": [
+          "Upload - File"
+        ],
         "responses": {
           "200": {
             "description": "Delete a file",
@@ -7688,7 +7853,9 @@
             }
           }
         ],
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Login with a provider",
         "description": "Redirects to provider login before being redirect to /auth/{provider}/callback",
         "responses": {
@@ -7710,7 +7877,9 @@
     },
     "/auth/local": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Local login",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -7761,7 +7930,9 @@
     },
     "/auth/local/register": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Register a user",
         "description": "Returns a jwt token and user info",
         "requestBody": {
@@ -7816,7 +7987,9 @@
     },
     "/auth/{provider}/callback": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Default Callback from provider auth",
         "parameters": [
           {
@@ -7855,7 +8028,9 @@
     },
     "/auth/forgot-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send rest password email",
         "requestBody": {
           "required": true,
@@ -7885,7 +8060,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -7907,7 +8084,9 @@
     },
     "/auth/reset-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Rest user password",
         "requestBody": {
           "required": true,
@@ -7961,7 +8140,9 @@
     },
     "/auth/change-password": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Update user's own password",
         "requestBody": {
           "required": true,
@@ -8015,7 +8196,9 @@
     },
     "/auth/email-confirmation": {
       "get": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Confirm user email",
         "parameters": [
           {
@@ -8046,7 +8229,9 @@
     },
     "/auth/send-email-confirmation": {
       "post": {
-        "tags": ["Users-Permissions - Auth"],
+        "tags": [
+          "Users-Permissions - Auth"
+        ],
         "summary": "Send confirmation email",
         "requestBody": {
           "required": true,
@@ -8076,7 +8261,9 @@
                     },
                     "sent": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -8098,7 +8285,9 @@
     },
     "/users-permissions/permissions": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get default generated permissions",
         "responses": {
           "200": {
@@ -8167,7 +8356,9 @@
     },
     "/users-permissions/roles": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "List roles",
         "responses": {
           "200": {
@@ -8226,7 +8417,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a role",
         "requestBody": {
           "$ref": "#/components/requestBodies/Users-Permissions-RoleRequest"
@@ -8241,7 +8434,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -8263,7 +8458,9 @@
     },
     "/users-permissions/roles/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a role",
         "parameters": [
           {
@@ -8328,7 +8525,9 @@
     },
     "/users-permissions/roles/{role}": {
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a role",
         "parameters": [
           {
@@ -8354,7 +8553,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -8374,7 +8575,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a role",
         "parameters": [
           {
@@ -8397,7 +8600,9 @@
                   "properties": {
                     "ok": {
                       "type": "string",
-                      "enum": [true]
+                      "enum": [
+                        true
+                      ]
                     }
                   }
                 }
@@ -8419,7 +8624,9 @@
     },
     "/users": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get list of users",
         "responses": {
           "200": {
@@ -8460,7 +8667,9 @@
         }
       },
       "post": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Create a user",
         "requestBody": {
           "required": true,
@@ -8468,7 +8677,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -8545,7 +8758,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get a user",
         "parameters": [
           {
@@ -8592,7 +8807,9 @@
         }
       },
       "put": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Update a user",
         "parameters": [
           {
@@ -8611,7 +8828,11 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["username", "email", "password"],
+                "required": [
+                  "username",
+                  "email",
+                  "password"
+                ],
                 "properties": {
                   "email": {
                     "type": "string"
@@ -8686,7 +8907,9 @@
         }
       },
       "delete": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Delete a user",
         "parameters": [
           {
@@ -8739,7 +8962,9 @@
     },
     "/users/me": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get authenticated user info",
         "responses": {
           "200": {
@@ -8777,7 +9002,9 @@
     },
     "/users/count": {
       "get": {
-        "tags": ["Users-Permissions - Users & Roles"],
+        "tags": [
+          "Users-Permissions - Users & Roles"
+        ],
         "summary": "Get user count",
         "responses": {
           "200": {
@@ -8816,7 +9043,9 @@
     "schemas": {
       "Error": {
         "type": "object",
-        "required": ["error"],
+        "required": [
+          "error"
+        ],
         "properties": {
           "data": {
             "nullable": true,
@@ -8853,10 +9082,18 @@
       },
       "CommentRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "position", "title", "description", "rating"],
+            "required": [
+              "name",
+              "position",
+              "title",
+              "description",
+              "rating"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -8932,7 +9169,13 @@
       },
       "Comment": {
         "type": "object",
-        "required": ["name", "position", "title", "description", "rating"],
+        "required": [
+          "name",
+          "position",
+          "title",
+          "description",
+          "rating"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -9339,10 +9582,18 @@
       },
       "ContactUsRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "email", "message", "file", "state"],
+            "required": [
+              "name",
+              "email",
+              "message",
+              "file",
+              "state"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -9368,7 +9619,10 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["read", "unread"]
+                "enum": [
+                  "read",
+                  "unread"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -9428,7 +9682,13 @@
       },
       "ContactUs": {
         "type": "object",
-        "required": ["name", "email", "message", "file", "state"],
+        "required": [
+          "name",
+          "email",
+          "message",
+          "file",
+          "state"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -10046,7 +10306,10 @@
           },
           "state": {
             "type": "string",
-            "enum": ["read", "unread"]
+            "enum": [
+              "read",
+              "unread"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -10237,7 +10500,10 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["read", "unread"]
+                  "enum": [
+                    "read",
+                    "unread"
+                  ]
                 },
                 "createdAt": {
                   "type": "string",
@@ -10308,10 +10574,18 @@
       },
       "InsightRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "description", "image", "slug", "content"],
+            "required": [
+              "title",
+              "description",
+              "image",
+              "slug",
+              "content"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -10423,7 +10697,13 @@
       },
       "Insight": {
         "type": "object",
-        "required": ["title", "description", "image", "slug", "content"],
+        "required": [
+          "title",
+          "description",
+          "image",
+          "slug",
+          "content"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -11335,6 +11615,144 @@
                                 }
                               }
                             },
+                            "description": {
+                              "type": "string"
+                            },
+                            "features": {
+                              "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                            },
+                            "steps": {
+                              "$ref": "#/components/schemas/StepListStepListComponent"
+                            },
+                            "preview": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "alternativeText": {
+                                  "type": "string"
+                                },
+                                "caption": {
+                                  "type": "string"
+                                },
+                                "width": {
+                                  "type": "integer"
+                                },
+                                "height": {
+                                  "type": "integer"
+                                },
+                                "formats": {},
+                                "hash": {
+                                  "type": "string"
+                                },
+                                "ext": {
+                                  "type": "string"
+                                },
+                                "mime": {
+                                  "type": "string"
+                                },
+                                "size": {
+                                  "type": "number",
+                                  "format": "float"
+                                },
+                                "url": {
+                                  "type": "string"
+                                },
+                                "previewUrl": {
+                                  "type": "string"
+                                },
+                                "provider": {
+                                  "type": "string"
+                                },
+                                "provider_metadata": {},
+                                "related": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "folder": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "folderPath": {
+                                  "type": "string"
+                                },
+                                "createdAt": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "updatedAt": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "publishedAt": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "createdBy": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "updatedBy": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "locale": {
+                                  "type": "string"
+                                },
+                                "localizations": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -12147,6 +12565,200 @@
           }
         }
       },
+      "ListItemListItemComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "ListWithSubtitleListWithSubTitleComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subTitle": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListItemListItemComponent"
+            }
+          }
+        }
+      },
+      "StepListItemStepListItemComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {},
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number",
+                "format": "float"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {},
+              "related": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "folder": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "folderPath": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "publishedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "updatedBy": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
+              },
+              "localizations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "StepListStepListComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subTitle": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StepListItemStepListItemComponent"
+            }
+          }
+        }
+      },
       "TechnologyTechnologyComponent": {
         "type": "object",
         "properties": {
@@ -12160,10 +12772,15 @@
       },
       "InsightCategoryRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "slug"],
+            "required": [
+              "name",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -12244,7 +12861,10 @@
       },
       "InsightCategory": {
         "type": "object",
-        "required": ["name", "slug"],
+        "required": [
+          "name",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -13173,6 +13793,144 @@
                                       }
                                     }
                                   },
+                                  "description": {
+                                    "type": "string"
+                                  },
+                                  "features": {
+                                    "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                                  },
+                                  "steps": {
+                                    "$ref": "#/components/schemas/StepListStepListComponent"
+                                  },
+                                  "preview": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      },
+                                      "name": {
+                                        "type": "string"
+                                      },
+                                      "alternativeText": {
+                                        "type": "string"
+                                      },
+                                      "caption": {
+                                        "type": "string"
+                                      },
+                                      "width": {
+                                        "type": "integer"
+                                      },
+                                      "height": {
+                                        "type": "integer"
+                                      },
+                                      "formats": {},
+                                      "hash": {
+                                        "type": "string"
+                                      },
+                                      "ext": {
+                                        "type": "string"
+                                      },
+                                      "mime": {
+                                        "type": "string"
+                                      },
+                                      "size": {
+                                        "type": "number",
+                                        "format": "float"
+                                      },
+                                      "url": {
+                                        "type": "string"
+                                      },
+                                      "previewUrl": {
+                                        "type": "string"
+                                      },
+                                      "provider": {
+                                        "type": "string"
+                                      },
+                                      "provider_metadata": {},
+                                      "related": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "documentId": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "folder": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "number"
+                                          },
+                                          "documentId": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      },
+                                      "folderPath": {
+                                        "type": "string"
+                                      },
+                                      "createdAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "updatedAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "publishedAt": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                      },
+                                      "createdBy": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "number"
+                                          },
+                                          "documentId": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      },
+                                      "updatedBy": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "number"
+                                          },
+                                          "documentId": {
+                                            "type": "string"
+                                          }
+                                        }
+                                      },
+                                      "locale": {
+                                        "type": "string"
+                                      },
+                                      "localizations": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "documentId": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -13661,10 +14419,15 @@
       },
       "NewsSubscriberRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["name", "email"],
+            "required": [
+              "name",
+              "email"
+            ],
             "type": "object",
             "properties": {
               "name": {
@@ -13732,7 +14495,10 @@
       },
       "NewsSubscriber": {
         "type": "object",
-        "required": ["name", "email"],
+        "required": [
+          "name",
+          "email"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -14123,7 +14889,9 @@
       },
       "PartnerRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -15341,6 +16109,144 @@
                           }
                         }
                       },
+                      "description": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                      },
+                      "steps": {
+                        "$ref": "#/components/schemas/StepListStepListComponent"
+                      },
+                      "preview": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternativeText": {
+                            "type": "string"
+                          },
+                          "caption": {
+                            "type": "string"
+                          },
+                          "width": {
+                            "type": "integer"
+                          },
+                          "height": {
+                            "type": "integer"
+                          },
+                          "formats": {},
+                          "hash": {
+                            "type": "string"
+                          },
+                          "ext": {
+                            "type": "string"
+                          },
+                          "mime": {
+                            "type": "string"
+                          },
+                          "size": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "url": {
+                            "type": "string"
+                          },
+                          "previewUrl": {
+                            "type": "string"
+                          },
+                          "provider": {
+                            "type": "string"
+                          },
+                          "provider_metadata": {},
+                          "related": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "folder": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "folderPath": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "publishedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "createdBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "updatedBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "locale": {
+                            "type": "string"
+                          },
+                          "localizations": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -15616,7 +16522,9 @@
       },
       "ProjectRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "required": [
@@ -16718,6 +17626,144 @@
                                 }
                               }
                             },
+                            "description": {
+                              "type": "string"
+                            },
+                            "features": {
+                              "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                            },
+                            "steps": {
+                              "$ref": "#/components/schemas/StepListStepListComponent"
+                            },
+                            "preview": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "alternativeText": {
+                                  "type": "string"
+                                },
+                                "caption": {
+                                  "type": "string"
+                                },
+                                "width": {
+                                  "type": "integer"
+                                },
+                                "height": {
+                                  "type": "integer"
+                                },
+                                "formats": {},
+                                "hash": {
+                                  "type": "string"
+                                },
+                                "ext": {
+                                  "type": "string"
+                                },
+                                "mime": {
+                                  "type": "string"
+                                },
+                                "size": {
+                                  "type": "number",
+                                  "format": "float"
+                                },
+                                "url": {
+                                  "type": "string"
+                                },
+                                "previewUrl": {
+                                  "type": "string"
+                                },
+                                "provider": {
+                                  "type": "string"
+                                },
+                                "provider_metadata": {},
+                                "related": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                },
+                                "folder": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "folderPath": {
+                                  "type": "string"
+                                },
+                                "createdAt": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "updatedAt": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "publishedAt": {
+                                  "type": "string",
+                                  "format": "date-time"
+                                },
+                                "createdBy": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "updatedBy": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "documentId": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "locale": {
+                                  "type": "string"
+                                },
+                                "localizations": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "number"
+                                      },
+                                      "documentId": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -17423,10 +18469,15 @@
       },
       "ProjectDomainRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["slug", "name"],
+            "required": [
+              "slug",
+              "name"
+            ],
             "type": "object",
             "properties": {
               "slug": {
@@ -17507,7 +18558,10 @@
       },
       "ProjectDomain": {
         "type": "object",
-        "required": ["slug", "name"],
+        "required": [
+          "slug",
+          "name"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -18645,6 +19699,144 @@
                             },
                             "documentId": {
                               "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                      },
+                      "steps": {
+                        "$ref": "#/components/schemas/StepListStepListComponent"
+                      },
+                      "preview": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternativeText": {
+                            "type": "string"
+                          },
+                          "caption": {
+                            "type": "string"
+                          },
+                          "width": {
+                            "type": "integer"
+                          },
+                          "height": {
+                            "type": "integer"
+                          },
+                          "formats": {},
+                          "hash": {
+                            "type": "string"
+                          },
+                          "ext": {
+                            "type": "string"
+                          },
+                          "mime": {
+                            "type": "string"
+                          },
+                          "size": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "url": {
+                            "type": "string"
+                          },
+                          "previewUrl": {
+                            "type": "string"
+                          },
+                          "provider": {
+                            "type": "string"
+                          },
+                          "provider_metadata": {},
+                          "related": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "folder": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "folderPath": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "publishedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "createdBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "updatedBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "locale": {
+                            "type": "string"
+                          },
+                          "localizations": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
                             }
                           }
                         }
@@ -18924,10 +20116,18 @@
       },
       "ServiceRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["slug", "name"],
+            "required": [
+              "slug",
+              "name",
+              "description",
+              "steps",
+              "preview"
+            ],
             "type": "object",
             "properties": {
               "slug": {
@@ -18949,6 +20149,26 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "description": {
+                "type": "string"
+              },
+              "features": {
+                "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+              },
+              "steps": {
+                "$ref": "#/components/schemas/StepListStepListComponent"
+              },
+              "preview": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
               },
               "locale": {
                 "type": "string"
@@ -19008,7 +20228,13 @@
       },
       "Service": {
         "type": "object",
-        "required": ["slug", "name"],
+        "required": [
+          "slug",
+          "name",
+          "description",
+          "steps",
+          "preview"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -20150,6 +21376,144 @@
                           }
                         }
                       },
+                      "description": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                      },
+                      "steps": {
+                        "$ref": "#/components/schemas/StepListStepListComponent"
+                      },
+                      "preview": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternativeText": {
+                            "type": "string"
+                          },
+                          "caption": {
+                            "type": "string"
+                          },
+                          "width": {
+                            "type": "integer"
+                          },
+                          "height": {
+                            "type": "integer"
+                          },
+                          "formats": {},
+                          "hash": {
+                            "type": "string"
+                          },
+                          "ext": {
+                            "type": "string"
+                          },
+                          "mime": {
+                            "type": "string"
+                          },
+                          "size": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "url": {
+                            "type": "string"
+                          },
+                          "previewUrl": {
+                            "type": "string"
+                          },
+                          "provider": {
+                            "type": "string"
+                          },
+                          "provider_metadata": {},
+                          "related": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "folder": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "folderPath": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "publishedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "createdBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "updatedBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "locale": {
+                            "type": "string"
+                          },
+                          "localizations": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -20359,6 +21723,144 @@
               }
             }
           },
+          "description": {
+            "type": "string"
+          },
+          "features": {
+            "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+          },
+          "steps": {
+            "$ref": "#/components/schemas/StepListStepListComponent"
+          },
+          "preview": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {},
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number",
+                "format": "float"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {},
+              "related": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "folder": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "folderPath": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "publishedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "updatedBy": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
+              },
+              "localizations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -20425,10 +21927,15 @@
       },
       "StepRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "description"],
+            "required": [
+              "title",
+              "description"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -20495,7 +22002,10 @@
       },
       "Step": {
         "type": "object",
-        "required": ["title", "description"],
+        "required": [
+          "title",
+          "description"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -20884,7 +22394,9 @@
       },
       "TechnologyRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -22116,6 +23628,144 @@
                           }
                         }
                       },
+                      "description": {
+                        "type": "string"
+                      },
+                      "features": {
+                        "$ref": "#/components/schemas/ListWithSubtitleListWithSubTitleComponent"
+                      },
+                      "steps": {
+                        "$ref": "#/components/schemas/StepListStepListComponent"
+                      },
+                      "preview": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "alternativeText": {
+                            "type": "string"
+                          },
+                          "caption": {
+                            "type": "string"
+                          },
+                          "width": {
+                            "type": "integer"
+                          },
+                          "height": {
+                            "type": "integer"
+                          },
+                          "formats": {},
+                          "hash": {
+                            "type": "string"
+                          },
+                          "ext": {
+                            "type": "string"
+                          },
+                          "mime": {
+                            "type": "string"
+                          },
+                          "size": {
+                            "type": "number",
+                            "format": "float"
+                          },
+                          "url": {
+                            "type": "string"
+                          },
+                          "previewUrl": {
+                            "type": "string"
+                          },
+                          "provider": {
+                            "type": "string"
+                          },
+                          "provider_metadata": {},
+                          "related": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "folder": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "folderPath": {
+                            "type": "string"
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "publishedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "createdBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "updatedBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "locale": {
+                            "type": "string"
+                          },
+                          "localizations": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -22405,10 +24055,18 @@
       },
       "VacancyRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["title", "skills", "workType", "image", "slug"],
+            "required": [
+              "title",
+              "skills",
+              "workType",
+              "image",
+              "slug"
+            ],
             "type": "object",
             "properties": {
               "title": {
@@ -22515,7 +24173,13 @@
       },
       "Vacancy": {
         "type": "object",
-        "required": ["title", "skills", "workType", "image", "slug"],
+        "required": [
+          "title",
+          "skills",
+          "workType",
+          "image",
+          "slug"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -23676,18 +25340,13 @@
           },
           "type": {
             "type": "string",
-            "enum": ["Full-time", "Part-time", "Remote", "Office", "Hybrid"]
-          }
-        }
-      },
-      "ListItemListItemComponent": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "number"
-          },
-          "text": {
-            "type": "string"
+            "enum": [
+              "Full-time",
+              "Part-time",
+              "Remote",
+              "Office",
+              "Hybrid"
+            ]
           }
         }
       },
@@ -23751,7 +25410,9 @@
       },
       "VacancyReplayRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "type": "object",
@@ -23779,7 +25440,10 @@
               },
               "state": {
                 "type": "string",
-                "enum": ["read", "unread"]
+                "enum": [
+                  "read",
+                  "unread"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -24456,7 +26120,10 @@
           },
           "state": {
             "type": "string",
-            "enum": ["read", "unread"]
+            "enum": [
+              "read",
+              "unread"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -24647,7 +26314,10 @@
                 },
                 "state": {
                   "type": "string",
-                  "enum": ["read", "unread"]
+                  "enum": [
+                    "read",
+                    "unread"
+                  ]
                 },
                 "createdAt": {
                   "type": "string",
@@ -24718,10 +26388,14 @@
       },
       "WhoWeAreRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
-            "required": ["story"],
+            "required": [
+              "story"
+            ],
             "type": "object",
             "properties": {
               "services": {
@@ -24788,7 +26462,9 @@
       },
       "WhoWeAre": {
         "type": "object",
-        "required": ["story"],
+        "required": [
+          "story"
+        ],
         "properties": {
           "id": {
             "type": "number"
@@ -25236,7 +26912,9 @@
       },
       "WorkerRequest": {
         "type": "object",
-        "required": ["data"],
+        "required": [
+          "data"
+        ],
         "properties": {
           "data": {
             "required": [
@@ -25359,7 +27037,13 @@
       },
       "Worker": {
         "type": "object",
-        "required": ["name", "photo", "experience", "description", "position"],
+        "required": [
+          "name",
+          "photo",
+          "experience",
+          "description",
+          "position"
+        ],
         "properties": {
           "id": {
             "type": "number"
