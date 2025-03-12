@@ -1011,6 +1011,41 @@ export interface ApiWhoWeAreWhoWeAre extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiWhyUsWhyUs extends Struct.SingleTypeSchema {
+  collectionName: 'why_uses';
+  info: {
+    displayName: 'WhyUs';
+    pluralName: 'why-uses';
+    singularName: 'why-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    items: Schema.Attribute.Component<'step-list-item.step-list-item', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::why-us.why-us'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiWorkerWorker extends Struct.CollectionTypeSchema {
   collectionName: 'workers';
   info: {
@@ -1572,6 +1607,7 @@ declare module '@strapi/strapi' {
       'api::vacancy-replay.vacancy-replay': ApiVacancyReplayVacancyReplay;
       'api::vacancy.vacancy': ApiVacancyVacancy;
       'api::who-we-are.who-we-are': ApiWhoWeAreWhoWeAre;
+      'api::why-us.why-us': ApiWhyUsWhyUs;
       'api::worker.worker': ApiWorkerWorker;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
