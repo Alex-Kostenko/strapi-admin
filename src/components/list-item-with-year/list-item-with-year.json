@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_list_item_with_year_list_item_with_years",
+  "info": {
+    "displayName": "List item with year"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 2019
+    }
+  }
+}
