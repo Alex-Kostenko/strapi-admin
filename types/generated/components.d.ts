@@ -66,6 +66,19 @@ export interface ListItemListItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ListWithSubtitleListWithSubTitle
+  extends Struct.ComponentSchema {
+  collectionName: 'components_list_with_subtitle_list_with_sub_titles';
+  info: {
+    displayName: 'List With SubTitle';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'list-item.list-item', true>;
+    subTitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListWithTitlesListWithTitles extends Struct.ComponentSchema {
   collectionName: 'components_list_with_titles_list_with_titles';
   info: {
@@ -156,6 +169,30 @@ export interface StackStack extends Struct.ComponentSchema {
   };
 }
 
+export interface StepListItemStepListItem extends Struct.ComponentSchema {
+  collectionName: 'components_step_list_item_step_list_items';
+  info: {
+    displayName: 'Step List Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface StepListStepList extends Struct.ComponentSchema {
+  collectionName: 'components_step_list_step_lists';
+  info: {
+    displayName: 'Step List';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'step-list-item.step-list-item', true>;
+    subTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface TechnologyTechnology extends Struct.ComponentSchema {
   collectionName: 'components_technology_technologies';
   info: {
@@ -190,11 +227,14 @@ declare module '@strapi/strapi' {
       'list-item-with-title.list-item-with-title': ListItemWithTitleListItemWithTitle;
       'list-item-with-year.list-item-with-year': ListItemWithYearListItemWithYear;
       'list-item.list-item': ListItemListItem;
+      'list-with-subtitle.list-with-sub-title': ListWithSubtitleListWithSubTitle;
       'list-with-titles.list-with-titles': ListWithTitlesListWithTitles;
       'list-with-years.list-with-years': ListWithYearsListWithYears;
       'list.list': ListList;
       'skill.skill': SkillSkill;
       'stack.stack': StackStack;
+      'step-list-item.step-list-item': StepListItemStepListItem;
+      'step-list.step-list': StepListStepList;
       'technology.technology': TechnologyTechnology;
       'work-schedule.work-schedule': WorkScheduleWorkSchedule;
     }

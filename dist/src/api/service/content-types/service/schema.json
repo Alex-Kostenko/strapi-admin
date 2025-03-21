@@ -4,7 +4,8 @@
     "info": {
         "singularName": "service",
         "pluralName": "services",
-        "displayName": "Service"
+        "displayName": "Service",
+        "description": ""
     },
     "options": {
         "draftAndPublish": true
@@ -25,6 +26,30 @@
             "relation": "manyToMany",
             "target": "api::project.project",
             "inversedBy": "services"
+        },
+        "description": {
+            "type": "text",
+            "required": true,
+            "default": "description default value Developing complex systems or applications can be challenging. Uncertainty in feature deployment, inefficient time management, budget overruns, and project conflicts are common. Our project management consultancy service leverages the experiences of others, allowing you to learn from their mistakes and avoid risks.  Let's take your project, project portfolio, processes, resource or release management to the next level!"
+        },
+        "features": {
+            "type": "component",
+            "repeatable": false,
+            "component": "list-with-subtitle.list-with-sub-title"
+        },
+        "steps": {
+            "type": "component",
+            "repeatable": false,
+            "required": true,
+            "component": "step-list.step-list"
+        },
+        "preview": {
+            "allowedTypes": [
+                "images"
+            ],
+            "type": "media",
+            "multiple": false,
+            "required": true
         }
     }
 }

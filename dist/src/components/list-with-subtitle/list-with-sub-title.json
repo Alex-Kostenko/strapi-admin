@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_list_with_subtitle_list_with_sub_titles",
+    "info": {
+        "displayName": "List With SubTitle"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "subTitle": {
+            "type": "text",
+            "required": true
+        },
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "list-item.list-item"
+        }
+    }
+}

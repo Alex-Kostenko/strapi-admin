@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_step_list_step_lists",
+    "info": {
+        "displayName": "Step List"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "subTitle": {
+            "type": "string",
+            "required": true
+        },
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "step-list-item.step-list-item"
+        }
+    }
+}
