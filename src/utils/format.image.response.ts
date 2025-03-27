@@ -8,8 +8,6 @@ export async function formatImageResponse(data: Record<string, any>) {
     return Promise.all(data.map(formatImageResponse));
   }
 
-  console.log('First: ', data);
-
   for (let key in data) {
     console.log('Key map: ', key, data[key]);
 
@@ -23,14 +21,15 @@ export async function formatImageResponse(data: Record<string, any>) {
       data[key] = await Promise.all(data[key].map(formatImageResponse));
     } else if (typeof data[key] === 'object') {
       if ('url' in data[key]) {
+        console.log('URL: ', data[key].url);
         if (isValidUrl(data[key].url)) {
           console.log('WEB: ', data[key].url);
         } else {
           console.log('Folders: ', data[key].url);
-          executeFolderImage(data[key]);
+          data[key] = executeFolderImage(data[key]);
         }
       }
-      // Рекурсивна обробка вкладених об'єктів (щоб не втрачати їх)
+
       data[key] = await formatImageResponse(data[key]);
     }
   }

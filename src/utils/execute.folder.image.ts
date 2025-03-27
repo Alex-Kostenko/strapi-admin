@@ -4,22 +4,20 @@ import fs from 'fs';
 import { getFileExtension } from './functions';
 
 export function executeFolderImage(objec: Record<string, any>) {
-  for (const key in objec) {
-    if (!('url' in objec[key])) {
-      return;
-    }
+  if (!('url' in objec)) {
+    return;
+  }
 
-    const filePath = path.join(__dirname, '../../../public', objec[key].url);
+  const filePath = path.join(__dirname, '../../../public', objec.url);
 
-    try {
-      const base64 = fs.readFileSync(filePath, { encoding: 'base64' });
+  try {
+    const base64 = fs.readFileSync(filePath, { encoding: 'base64' });
 
-      objec[key] = {
-        ...objec[key],
-        base64: `data:image/${getFileExtension(objec[key].url)};base64,${base64}`,
-      };
-    } catch (error) {
-      console.error(`Error reading file at ${filePath}:`, error);
-    }
+    return {
+      ...objec,
+      base64: `data:image/${getFileExtension(objec.url)};base64,${base64}`,
+    };
+  } catch (error) {
+    return objec;
   }
 }
