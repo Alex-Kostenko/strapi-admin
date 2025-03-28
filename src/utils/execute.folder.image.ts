@@ -1,5 +1,4 @@
 import path from 'path';
-import { Context } from 'koa';
 import fs from 'fs';
 import { getFileExtension } from './functions';
 
@@ -20,4 +19,11 @@ export function executeFolderImage(objec: Record<string, any>) {
   } catch (error) {
     return objec;
   }
+}
+
+export function executeFolderImageByUrl(url: string) {
+  const filePath = path.join(__dirname, '../../../public', url);
+
+  const base64 = fs.readFileSync(filePath, { encoding: 'base64' });
+  return `data:image/${getFileExtension(url)};base64,${base64}`;
 }

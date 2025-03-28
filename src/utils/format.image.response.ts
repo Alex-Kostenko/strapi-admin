@@ -1,5 +1,8 @@
 import { isValidUrl } from './check.format';
-import { executeFolderImage } from './execute.folder.image';
+import { executeFolderImageByUrl } from './execute.folder.image';
+import { fetchWebImageAsBase64 } from './execute.web.image';
+
+const EMPTY_BASE64_IMAGE = 'data:image/png;base64,';
 
 export async function formatImageResponse(data: Record<string, any>) {
   if (!data || typeof data !== 'object') return data;
@@ -9,25 +12,27 @@ export async function formatImageResponse(data: Record<string, any>) {
   }
 
   for (let key in data) {
-    console.log('Key map: ', key, data[key]);
-
     if (!data[key]) {
-      console.log('Skip!');
       continue;
     }
 
     if (Array.isArray(data[key])) {
-      console.log('Inside field is array: ', data[key]);
       data[key] = await Promise.all(data[key].map(formatImageResponse));
     } else if (typeof data[key] === 'object') {
       if ('url' in data[key]) {
-        console.log('URL: ', data[key].url);
-        if (isValidUrl(data[key].url)) {
-          console.log('WEB: ', data[key].url);
-        } else {
-          console.log('Folders: ', data[key].url);
-          data[key] = executeFolderImage(data[key]);
+        const url = data[key].url;
+        let base64: string = EMPTY_BASE64_IMAGE;
+        try {
+          if (isValidUrl(url)) {
+            base64 = await fetchWebImageAsBase64(url);
+          } else {
+            base64 = executeFolderImageByUrl(url);
+          }
+        } catch (e) {
+          console.log('Error: ', e);
         }
+
+        data[key] = { ...data[key], base64 };
       }
 
       data[key] = await formatImageResponse(data[key]);

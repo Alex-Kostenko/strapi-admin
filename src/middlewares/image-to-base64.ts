@@ -21,12 +21,9 @@ export default (config: Record<string, unknown>, { strapi }) => {
       };
 
       const data = await formatImageResponse(response.data);
-      console.log(
-        'Response: ',
-        response.data.map((v) => v.technologies)
-      );
-      console.log('Primary: ', response.data);
-      // console.log('Formated response: ', data);
+
+      // console.log('Primary: ', response.data);
+      console.log('Formated response: ', data);
 
       ctx.body = {
         // data: imageUrlToBase64(response.data),
