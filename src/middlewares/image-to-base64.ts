@@ -1,12 +1,11 @@
-import { Context, Next } from "koa";
-import { getMeta, imageUrlToBase64, removeUndefinedValues } from "../utils";
+import { Context, Next } from 'koa';
+import { getMeta, imageUrlToBase64, removeUndefinedValues } from '../utils';
+import { formatImageResponse } from '../utils/format.image.response';
 export default (config: Record<string, unknown>, { strapi }) => {
   return async (ctx: Context, next: Next) => {
     const allowedPaths = /\/api\/\/*/i;
 
     if (!ctx.request.path.match(allowedPaths)) {
-      console.log("now allowed");
-
       await next();
 
       return ctx;
@@ -19,8 +18,10 @@ export default (config: Record<string, unknown>, { strapi }) => {
         meta: Record<string, any>;
       };
 
+      const data = await formatImageResponse(response.data);
+
       ctx.body = {
-        data: imageUrlToBase64(response.data),
+        data,
         meta: removeUndefinedValues(getMeta(ctx, response.data)),
       };
     }
