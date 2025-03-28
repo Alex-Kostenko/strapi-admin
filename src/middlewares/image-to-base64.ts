@@ -6,8 +6,6 @@ export default (config: Record<string, unknown>, { strapi }) => {
     const allowedPaths = /\/api\/\/*/i;
 
     if (!ctx.request.path.match(allowedPaths)) {
-      console.log('now allowed');
-
       await next();
 
       return ctx;
@@ -22,11 +20,7 @@ export default (config: Record<string, unknown>, { strapi }) => {
 
       const data = await formatImageResponse(response.data);
 
-      // console.log('Primary: ', response.data);
-      console.log('Formated response: ', data);
-
       ctx.body = {
-        // data: imageUrlToBase64(response.data),
         data,
         meta: removeUndefinedValues(getMeta(ctx, response.data)),
       };
