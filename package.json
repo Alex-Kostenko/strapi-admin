@@ -6,7 +6,7 @@
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
-    "develop": "strapi develop",
+    "develop": "cd ./src/plugins/pdf-preview && npm i && npm run build && cd ../../../ && npm run develop",
     "start": "strapi start",
     "strapi": "strapi",
     "build:prod": "NODE_ENV=production strapi build",
