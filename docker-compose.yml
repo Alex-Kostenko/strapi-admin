@@ -2,11 +2,17 @@ version: '3.8'
 
 services:
   strapi:
-    image: yourusername/strapi-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: strapi_app
     restart: always
     ports:
       - '1337:1337'
+    env_file:
+      - .env
+    depends_on:
+      - db
     environment:
       NODE_ENV: production
       DATABASE_CLIENT: postgres
@@ -15,18 +21,13 @@ services:
       DATABASE_NAME: strapi_db
       DATABASE_USERNAME: strapi_user
       DATABASE_PASSWORD: strapi_password
-      JWT_SECRET: ${JWT_SECRET}
-      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
-      API_TOKEN_SALT: ${API_TOKEN_SALT}
-    depends_on:
-      - db
 
   db:
     image: postgres:15-alpine
     container_name: strapi_db
     restart: always
     ports:
-      - '5432:5432'
+      - '5434:5432'
     environment:
       POSTGRES_DB: strapi_db
       POSTGRES_USER: strapi_user
