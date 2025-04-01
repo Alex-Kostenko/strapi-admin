@@ -6,6 +6,61 @@ on:
   workflow_dispatch:
 
 jobs:
+  configure:
+    runs-on: ubuntu-latest
+    environment: Production
+    permissions:
+      contents: read
+      deployments: write
+    name: Create config file
+    steps:
+      - name: Create env file
+        run: |
+          touch .env
+
+      - name: Configure db
+        run: |
+          echo "HOST=0.0.0.0" > .env
+          echo "PORT=1337" >> .env
+
+      - name: Configure Server
+        run: |
+          echo "HOST=0.0.0.0" >> .env
+          echo "PORT=1337" >> .env
+
+      - name: Configure Secrets
+        run: |
+          echo "APP_KEYS=PcHTGgixoYCYuNB48L0PZQ==,MlrrsJOpG4u+tMvJ3mVSSA==,DksVSq9d1xWypJcTxtjG6g==,w8M3OgOsI4fd8Q3/GqzNwg==" >> .env
+          echo "API_TOKEN_SALT=uKaJycDIoBftpOLnyycaGw==" >> .env
+          echo "ADMIN_JWT_SECRET=Z7CZ558vcbFzIhGyMzhUyA==" >> .env
+          echo "TRANSFER_TOKEN_SALT=qCaBOmoxDr8OrG3gylMV8A==" >> .env
+          echo "JWT_SECRET=C6qMOCTgnRQAUSAhklmQgg==" >> .env
+
+      - name: Configure DataBase
+        run: |
+          echo "DATABASE_CLIENT=postgres" >> .env
+          echo "DATABASE_HOST=127.0.0.1" >> .env
+          echo "DATABASE_PORT=5432" >> .env
+          echo "DATABASE_NAME=strapi" >> .env
+          echo "DATABASE_USERNAME=postgres" >> .env
+          echo "DATABASE_PASSWORD=1111" >> .env
+          echo "DATABASE_SSL=false" >> .env
+          echo "DATABASE_FILENAME=" >> .env
+
+      - name: Configure Cloudflare R2 & CDN
+        run: |
+          echo "CF_ACCESS_KEY_ID=acces_key" >> .env
+          echo "CF_ACCESS_SECRET=acces_secret" >> .env
+          echo "CF_PUBLIC_ACCESS_URL=public_acces_url" >> .env
+          echo "CF_BUCKET=bucket" >> .env
+          echo "CF_ENDPOINT=endpoint" >> .env
+
+      - name: Upload .env file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: env-file
+          path: .env
+
   build:
     runs-on: ubuntu-latest
     environment: Production
@@ -17,6 +72,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Download .env file
+        uses: actions/download-artifact@v4
+        with:
+          name: env-file
 
       - name: Dump database postgres sql
         run: pg_dump -h 127.0.0.1 -p 5432 -U username -d unicode_prod  -f backup.sql
