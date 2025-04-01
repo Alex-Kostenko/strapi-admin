@@ -981,6 +981,8 @@ export interface ApiWhoWeAreWhoWeAre extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    values: Schema.Attribute.Component<'step.step', true> &
+      Schema.Attribute.Required;
   };
 }
 

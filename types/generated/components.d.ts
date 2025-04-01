@@ -193,6 +193,18 @@ export interface StepListStepList extends Struct.ComponentSchema {
   };
 }
 
+export interface StepStep extends Struct.ComponentSchema {
+  collectionName: 'components_step_steps';
+  info: {
+    displayName: 'Step';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface TechnologyTechnology extends Struct.ComponentSchema {
   collectionName: 'components_technology_technologies';
   info: {
@@ -235,6 +247,7 @@ declare module '@strapi/strapi' {
       'stack.stack': StackStack;
       'step-list-item.step-list-item': StepListItemStepListItem;
       'step-list.step-list': StepListStepList;
+      'step.step': StepStep;
       'technology.technology': TechnologyTechnology;
       'work-schedule.work-schedule': WorkScheduleWorkSchedule;
     }
