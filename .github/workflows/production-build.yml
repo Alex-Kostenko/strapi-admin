@@ -18,11 +18,6 @@ jobs:
         run: |
           touch .env
 
-      - name: Configure db
-        run: |
-          echo "HOST=0.0.0.0" > .env
-          echo "PORT=1337" >> .env
-
       - name: Configure Server
         run: |
           echo "HOST=0.0.0.0" >> .env
@@ -30,30 +25,30 @@ jobs:
 
       - name: Configure Secrets
         run: |
-          echo "APP_KEYS=PcHTGgixoYCYuNB48L0PZQ==,MlrrsJOpG4u+tMvJ3mVSSA==,DksVSq9d1xWypJcTxtjG6g==,w8M3OgOsI4fd8Q3/GqzNwg==" >> .env
-          echo "API_TOKEN_SALT=uKaJycDIoBftpOLnyycaGw==" >> .env
-          echo "ADMIN_JWT_SECRET=Z7CZ558vcbFzIhGyMzhUyA==" >> .env
-          echo "TRANSFER_TOKEN_SALT=qCaBOmoxDr8OrG3gylMV8A==" >> .env
-          echo "JWT_SECRET=C6qMOCTgnRQAUSAhklmQgg==" >> .env
+          echo "APP_KEYS=${{ secrets.APP_KEYS }}" >> .env
+          echo "API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}" >> .env
+          echo "ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}" >> .env
+          echo "TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
 
       - name: Configure DataBase
         run: |
-          echo "DATABASE_CLIENT=postgres" >> .env
-          echo "DATABASE_HOST=127.0.0.1" >> .env
-          echo "DATABASE_PORT=5432" >> .env
-          echo "DATABASE_NAME=strapi" >> .env
-          echo "DATABASE_USERNAME=postgres" >> .env
-          echo "DATABASE_PASSWORD=1111" >> .env
-          echo "DATABASE_SSL=false" >> .env
-          echo "DATABASE_FILENAME=" >> .env
+          echo "DATABASE_CLIENT=${{ secrets.DATABASE_CLIENT }}" >> .env
+          echo "DATABASE_HOST=${{ secrets.DATABASE_HOST }}" >> .env
+          echo "DATABASE_PORT=${{ secrets.DATABASE_PORT }}" >> .env
+          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" >> .env
+          echo "DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}" >> .env
+          echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}" >> .env
+          echo "DATABASE_SSL=${{ secrets.DATABASE_SSL }}" >> .env
+          echo "DATABASE_FILENAME=${{ secrets.DATABASE_FILENAME }}" >> .env
 
       - name: Configure Cloudflare R2 & CDN
         run: |
-          echo "CF_ACCESS_KEY_ID=acces_key" >> .env
-          echo "CF_ACCESS_SECRET=acces_secret" >> .env
-          echo "CF_PUBLIC_ACCESS_URL=public_acces_url" >> .env
-          echo "CF_BUCKET=bucket" >> .env
-          echo "CF_ENDPOINT=endpoint" >> .env
+          echo "CF_ACCESS_KEY_ID=${{ secrets.CF_ACCESS_KEY_ID }}" >> .env
+          echo "CF_ACCESS_SECRET=${{ secrets.CF_ACCESS_SECRET }}" >> .env
+          echo "CF_PUBLIC_ACCESS_URL=${{ secrets.CF_PUBLIC_ACCESS_URL }}" >> .env
+          echo "CF_BUCKET=${{ secrets.CF_BUCKET }}" >> .env
+          echo "CF_ENDPOINT=${{ secrets.CF_ENDPOINT }}" >> .env
 
       - name: Upload .env file as artifact
         uses: actions/upload-artifact@v4
