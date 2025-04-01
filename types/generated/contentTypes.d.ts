@@ -847,33 +847,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiStepStep extends Struct.CollectionTypeSchema {
-  collectionName: 'steps';
-  info: {
-    description: '';
-    displayName: 'Step';
-    pluralName: 'steps';
-    singularName: 'step';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::step.step'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
   collectionName: 'technologies';
   info: {
@@ -1602,7 +1575,6 @@ declare module '@strapi/strapi' {
       'api::project-domain.project-domain': ApiProjectDomainProjectDomain;
       'api::project.project': ApiProjectProject;
       'api::service.service': ApiServiceService;
-      'api::step.step': ApiStepStep;
       'api::technology.technology': ApiTechnologyTechnology;
       'api::vacancy-replay.vacancy-replay': ApiVacancyReplayVacancyReplay;
       'api::vacancy.vacancy': ApiVacancyVacancy;
