@@ -6,6 +6,8 @@ WORKDIR /app
 
 # Copy the package.json and package-lock.json to the working directory
 COPY package*.json ./
+
+# Set environment variables for Strapi
 ENV NODE_ENV=production
 
 # Install dependencies
@@ -14,8 +16,12 @@ RUN npm ci
 # Copy the rest of the application code
 COPY . .
 
-# Set environment variables for Strapi
-ENV NODE_ENV=production
+# Build pllugins
+RUN cd src/plugins/pdf-preview
+RUN npm ci
+RUN npm run build
+
+WORKDIR /app
 
 RUN npm run build
 
@@ -23,5 +29,4 @@ RUN npm run build
 EXPOSE 1337
 
 # Run the Strapi application
-#CMD ["npm", "run", "build"]
 CMD ["npm", "run", "start"]
