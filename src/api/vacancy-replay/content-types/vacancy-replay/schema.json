@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vacancy_replays",
+  "info": {
+    "singularName": "vacancy-replay",
+    "pluralName": "vacancy-replays",
+    "displayName": "Vacancy Replay"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "message": {
+      "type": "text"
+    },
+    "file": {
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "read",
+        "unread"
+      ]
+    }
+  }
+}

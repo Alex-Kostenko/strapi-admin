@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_technology_technologies",
+  "info": {
+    "displayName": "Technology",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
