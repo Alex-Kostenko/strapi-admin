@@ -10,18 +10,16 @@ COPY package*.json ./
 # Set environment variables for Strapi
 ENV NODE_ENV=production
 
-# Install dependencies
-RUN npm ci
-
 # Copy the rest of the application code
 COPY . .
 
-# Build pllugins
-#RUN cd src/plugins/pdf-preview
-#RUN npm ci
-#RUN npm run build
+# Install dependencies
+RUN npm install --production
 
-#WORKDIR /app
+# Build pllugins
+RUN cd src/plugins/pdf-preview && npm run build
+
+WORKDIR /app
 
 RUN npm run build
 
