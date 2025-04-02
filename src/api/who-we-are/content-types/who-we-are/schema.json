@@ -22,6 +22,12 @@
       "repeatable": false,
       "component": "list-with-years.list-with-years",
       "required": true
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "step.step",
+      "required": true
     }
   }
 }
