@@ -45,6 +45,6 @@ jobs:
           script: |
             docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/strapi-api:prod
-            docker stop strapi-api:prod || true
-            docker rm strapi-api:prod || true
-            docker run -d --name strapi-api:prod -p 1337:1337 --network="host" --env-file .env ${{ secrets.DOCKERHUB_USERNAME }}/strapi-api:prod
+            docker stop strapi-api || true
+            docker rm strapi-api || true
+            docker run -d --name strapi-api -p 1337:1337 --network="host" --env-file .env ${{ secrets.DOCKERHUB_USERNAME }}/strapi-api:prod
