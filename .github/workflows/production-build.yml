@@ -27,6 +27,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
+          push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/strapi-api:prod
 
   deploy:
