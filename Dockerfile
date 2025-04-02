@@ -17,11 +17,11 @@ RUN npm ci
 COPY . .
 
 # Build pllugins
-RUN cd src/plugins/pdf-preview
-RUN npm ci
-RUN npm run build
+#RUN cd src/plugins/pdf-preview
+#RUN npm ci
+#RUN npm run build
 
-WORKDIR /app
+#WORKDIR /app
 
 RUN npm run build
 
